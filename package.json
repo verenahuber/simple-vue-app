@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Vue App\r Hallo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verenahuber/simple-vue-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verenahuber/simple-vue-app/issues"
+  },
+  "homepage": "https://github.com/verenahuber/simple-vue-app#readme",
+  "dependencies": {
+    "vuetify": "^3.0.1"
+  }
+}
