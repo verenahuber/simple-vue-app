@@ -4,9 +4,9 @@ import App from './App.vue'
 
 import { createRouter, createWebHashHistory} from 'vue-router'
 
-import Home from "./components/Home"
-import History from "./components/History"
-import Settings from "./components/Settings"
+import Home from "./components/Home.vue"
+import History from "./components/History.vue"
+import Settings from "./components/Settings.vue"
 
 
 // import './assets/main.css'
