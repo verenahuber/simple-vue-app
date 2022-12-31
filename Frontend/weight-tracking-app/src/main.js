@@ -1,6 +1,14 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
+
+import { createRouter, createWebHashHistory} from 'vue-router'
+
+import Home from "./components/Home"
+import History from "./components/History"
+import Settings from "./components/Settings"
+
+
 // import './assets/main.css'
 
 // Vuetify
@@ -23,4 +31,23 @@ const vuetify = createVuetify({
       },
 })
 
-createApp(App).use(vuetify).mount('#app')
+const app = createApp(App).use(vuetify)
+
+createApp(App)
+
+const routes = [
+  {path: "/", component: Home},
+  {path: "/history", component: History},
+  {path: "/settings", component: Settings}
+]
+
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes: routes,
+  linkActiveClass: "active"
+})
+
+app.use(router)
+
+app.mount('#app')
