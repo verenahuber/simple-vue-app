@@ -22,39 +22,39 @@ export default {
 <style scoped>
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 20px;
   padding: 20px 10px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .navbar .nav_buttons {
   display: flex;
-  
+  align-items: center;
 }
 .navbar .nav_buttons a {
   padding: 10px 20px;
   margin: 0 10px;
-  background: black;
+  background: lightgray;
   color: white;
   cursor: pointer;
   text-decoration: none;
+  border-radius: 100px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 .active{
-  color:red !important;
+  color:#6D60FF !important;
   background: white !important;
-  border: 1px solid black;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+  border: 2px solid #6D60FF;
 }
 
 </style>
