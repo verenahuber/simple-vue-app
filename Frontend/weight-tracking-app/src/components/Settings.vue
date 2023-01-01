@@ -20,9 +20,8 @@ export default {
   height:100vh;
   width:100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 60px;
+  font-size: 50px;
+  padding: 20px;
 }
 
 </style>

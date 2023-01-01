@@ -25,7 +25,7 @@ export default {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  padding: 20px 10px;
+  padding: 40px 20px;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -37,8 +37,8 @@ export default {
   align-items: center;
 }
 .navbar .nav_buttons a {
-  padding: 10px 20px;
-  margin: 0 10px;
+  padding: 18px 18px;
+  margin: 0 5px;
   background: lightgray;
   color: white;
   cursor: pointer;
