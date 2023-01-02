@@ -1,6 +1,6 @@
 <template>
     <div>
-      <p> BMI </p>
+      <p> Your BMI </p>
     </div>
   </template>
   

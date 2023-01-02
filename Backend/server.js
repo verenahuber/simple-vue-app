@@ -78,4 +78,18 @@ app.post("/weight", function (req, res) {
     });
 });
 
+app.put("/data/:id", function (req, res) {
+    fs.readFile(filename, "utf8", function (err, data) {
+        let dataAsObject = JSON.parse(data);
+        dataAsObject[req.params.id].height = req.body.height;
+        dataAsObject[req.params.id].age = req.body.age;
+        fs.writeFile(filename, JSON.stringify(dataAsObject), () => {
+            res.writeHead(200, {
+                "Content-Type": "application/json",
+            });
+            res.end(JSON.stringify(dataAsObject));
+        });
+    });
+});
+
 app.listen(port, () => console.log(`Server listening on port ${port}!`));

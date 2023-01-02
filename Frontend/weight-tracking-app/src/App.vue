@@ -23,6 +23,7 @@ export default {
 #app {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   width: 390px;
+  background-color: aqua;
 }
 
 *{

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="ListWeight">
         <span v-show="!isEditable" id="weight" @click="editWeight">{{ entry.weight }}</span>
         <v-text-field 
             id="input" 
@@ -55,14 +55,14 @@ export default {
 
 <style scoped>
 div {
-    width: 390px;
     display: flex;
     align-items: center;
 }
 
 #weight,
 #input {
-    width: 200px;
+    width: 80px;
     text-align: left;
 }
+
 </style>

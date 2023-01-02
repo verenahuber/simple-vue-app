@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container"> 
     <p>History</p> 
   </div>
-  <div class="container"> 
+  <div class="container">
     <ListWeight
       id="ListWeight"
       v-for="(singleEntry, index) of listOfEntries"
