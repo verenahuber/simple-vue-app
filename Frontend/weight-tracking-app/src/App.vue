@@ -22,6 +22,7 @@ export default {
 <style>
 #app {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
+  width: 390px;
 }
 
 *{

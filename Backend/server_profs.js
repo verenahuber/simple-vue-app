@@ -3,7 +3,7 @@ const app = express();
 const fs = require("fs");
 const cors = require("cors");
 const port = 8080;
-const filename = __dirname + "/weight.json";
+const filename = __dirname + "/profs.json";
 
 //Middleware
 app.use(express.json()); //for parsing application/json
@@ -16,7 +16,7 @@ app.use(log);
 
 
 //Endpoints
-app.get("/weight", function (req, res) {
+app.get("/profs", function (req, res) {
     fs.readFile(filename, "utf8", function (err, data) {
         res.writeHead(200, {
             "Content-Type": "application/json",
@@ -25,7 +25,7 @@ app.get("/weight", function (req, res) {
     });
 });
 
-app.get("/weight/:id", function (req, res) {
+app.get("/profs/:id", function (req, res) {
     fs.readFile(filename, "utf8", function (err, data) {
         const dataAsObject = JSON.parse(data)[req.params.id];
         res.writeHead(200, {
@@ -35,10 +35,11 @@ app.get("/weight/:id", function (req, res) {
     });
 });
 
-app.put("/weight/:id", function (req, res) {
+app.put("/profs/:id", function (req, res) {
     fs.readFile(filename, "utf8", function (err, data) {
         let dataAsObject = JSON.parse(data);
-        dataAsObject[req.params.id].weight = req.body.weight;
+        dataAsObject[req.params.id].name = req.body.name;
+        dataAsObject[req.params.id].rating = req.body.rating;
         fs.writeFile(filename, JSON.stringify(dataAsObject), () => {
             res.writeHead(200, {
                 "Content-Type": "application/json",
@@ -48,7 +49,7 @@ app.put("/weight/:id", function (req, res) {
     });
 });
 
-app.delete("/weight/:id", function (req, res) {
+app.delete("/profs/:id", function (req, res) {
     fs.readFile(filename, "utf8", function (err, data) {
         let dataAsObject = JSON.parse(data);
         dataAsObject.splice(req.params.id, 1);
@@ -61,13 +62,13 @@ app.delete("/weight/:id", function (req, res) {
     });
 });
 
-app.post("/weight", function (req, res) {
+app.post("/profs", function (req, res) {
     fs.readFile(filename, "utf8", function (err, data) {
         let dataAsObject = JSON.parse(data);
         dataAsObject.push({
             id: dataAsObject.length,
-            weight: req.body.weight,
-            date: req.body.date
+            name: req.body.name,
+            rating: req.body.rating,
         });
         fs.writeFile(filename, JSON.stringify(dataAsObject), () => {
             res.writeHead(200, {
