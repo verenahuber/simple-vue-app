@@ -1,7 +1,23 @@
 <template>
   <div>
-    <v-text-field id="input" label="Your Height" v-model="height" size="100%"></v-text-field>
-    <v-text-field id="input" label="Your Age" v-model="age" size="100%"></v-text-field>
+    <v-text-field 
+      id="input" 
+      label="Your Name" 
+      v-model="name" 
+      size="100%"></v-text-field>
+  </div>
+  <div>
+    <v-text-field 
+      id="input" 
+      label="Your Height" 
+      v-model="height" 
+      suffix="meters"
+      size="100%"></v-text-field>
+    <v-text-field 
+      id="input" 
+      label="Your Age" 
+      v-model="age" 
+      size="100%"></v-text-field>
     <v-btn @click="changeData">Change</v-btn>
   </div>
 </template>
@@ -9,21 +25,19 @@
 <script>
 export default {
   name: "Data",
-  props: ["entry"],
   data: function () {
     return {
       height: 0,
-      age: 0
+      age: 0,
+      name: ""
     };
   },
   methods: {
     changeData: function () {
-      console.log("1")
       this.$emit("dataChanged", {
         height: this.height,
         age: this.age
       });
-      console.log("2")
     }
   }
 }
