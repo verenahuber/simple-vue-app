@@ -1,10 +1,13 @@
 <template>
-  <div class="container">
-  <p>Settings</p>
-  </div>
-  <div class="container">
+    <header> 
+    <h3>Personal</h3>
+    <h1>Settings</h1> 
+  </header>
+  <div>
+  <div>
   <Data @dataChanged="changeData" ></Data>
   </div>
+</div>
 </template>
 
 <script>
@@ -35,11 +38,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.container{
-  width:100%;
-  display: flex;
-  font-size: 50px;
-  padding: 20px;
+
+header {
+margin-bottom: 33px;
+margin-left: 13px;
+}
+
+h1{
+  font-size: 35px;
+}
+
+h3{
+  margin-bottom: -2px;
+  font-size: 18px;
+  color: #AFB0B8;
 }
 
 </style>

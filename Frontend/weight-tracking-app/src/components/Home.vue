@@ -1,15 +1,18 @@
 <template>
-  <div class="container">
-    <p>Home</p> 
-  </div>
-  <div class="container">
-    <AddWeight @weightAdded="addWeight"> </AddWeight>
-  </div>
-  <div class="container">
+  <header> 
+    <h3>Overview</h3>
+    <h1>Home</h1> 
+  </header>
+  <div>
+  <div>
     <BMI></BMI>
   </div>
-  <div class="container">
+  <div>
     <WeightChart></WeightChart>
+  </div>
+  <div>
+    <AddWeight @weightAdded="addWeight"> </AddWeight>
+  </div>
   </div>
 </template>
 
@@ -47,11 +50,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.container{
-  width:100%;
-  display: flex;
-  font-size: 50px;
-  padding: 20px;
+
+header {
+margin-bottom: 33px;
+margin-left: 13px;
+}
+
+h1{
+  font-size: 35px;
+}
+
+h3{
+  margin-bottom: -2px;
+  font-size: 18px;
+  color: #AFB0B8;
 }
 
 </style>

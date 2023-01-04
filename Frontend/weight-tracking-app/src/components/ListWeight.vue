@@ -9,8 +9,9 @@
             @focusout="editWeight"
             ref="input">
         </v-text-field>
-        <p> kg </p>
-        <v-btn @click="removeWeight">Remove</v-btn>
+        <p id="p1">kg</p>
+        <p id="p2">date</p>
+        <button @click="removeWeight">Remove</button>
     </div>
 </template>
   
@@ -54,15 +55,39 @@ export default {
 </script>
 
 <style scoped>
-div {
+#ListWeight{
     display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    font-size: 20px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
     align-items: center;
+}
+p {
+    margin-left: -42px;
+    margin-right: 80px;
 }
 
 #weight,
 #input {
     width: 80px;
     text-align: left;
+}
+
+button{
+  background-color: #6D60FF;
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 0 13px 13px 0;
+  margin: 0;
 }
 
 </style>

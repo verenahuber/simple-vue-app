@@ -1,12 +1,11 @@
 <template>
-  <div>
+  <div class="container">
     <v-text-field 
       id="input" 
       label="Your Name" 
       v-model="name" 
-      size="100%"></v-text-field>
-  </div>
-  <div>
+      size="100%">
+    </v-text-field>
     <v-text-field 
       id="input" 
       label="Your Height" 
@@ -17,7 +16,8 @@
       id="input" 
       label="Your Age" 
       v-model="age" 
-      size="100%"></v-text-field>
+      size="100%">
+    </v-text-field>
     <v-btn @click="changeData">Change</v-btn>
   </div>
 </template>
@@ -46,8 +46,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-div {
+.container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 </style>

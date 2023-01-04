@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
    <Navbar/>
    <router-view></router-view>
   </div>
@@ -12,7 +12,6 @@ export default {
   name: "App",
   components: {
    Navbar
-
   }
 }
 
@@ -22,14 +21,13 @@ export default {
 <style>
 #app {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
-  width: 390px;
-  background-color: aqua;
+  color: #202020;
+  background-color: #FAFCFE;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 </style>

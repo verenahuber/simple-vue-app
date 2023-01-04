@@ -26,12 +26,12 @@ export default {
   align-items: center;
   font-size: 20px;
   padding: 40px 20px;
-  overflow: hidden;
   position: fixed;
   bottom: 0;
   width: 100%;
+  margin: 0;
+  right: 2px;
 }
-
 .navbar .nav_buttons {
   display: flex;
   align-items: center;
