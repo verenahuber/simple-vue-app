@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div id="add_weight">
       <v-text-field id="input" label="Your Weight" v-model="weight" size="100%"></v-text-field>
-      <v-btn @click="addWeight">Add</v-btn>
+      <button @click="addWeight">Add</button>
     </div>
   </template>
   
@@ -28,9 +28,33 @@
     }
   };
   </script>
+
   <style scoped>
   div {
     display: flex;
-    align-items: center;
   }
+
+  #add_weight {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    font-size: 20px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+  }
+
+  button{
+  background-color: #6D60FF;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 0 13px 13px 0;
+  margin: 0;
+}
   </style>

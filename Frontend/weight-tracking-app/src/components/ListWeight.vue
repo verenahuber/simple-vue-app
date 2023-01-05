@@ -80,7 +80,7 @@ button{
   background-color: #6D60FF;
   border: none;
   color: white;
-  padding: 12px 15px;
+  padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
