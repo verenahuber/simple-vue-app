@@ -10,7 +10,7 @@
             ref="input">
         </v-text-field>
         <p id="p1">kg</p>
-        <p id="p2">date</p>
+        <span id="p2">{{ entry.date }}</span>
         <button @click="removeWeight">Remove</button>
     </div>
 </template>
@@ -66,8 +66,12 @@ export default {
     align-items: center;
 }
 p {
-    margin-left: -42px;
-    margin-right: 80px;
+    margin-left: -52px;
+    margin-right: 10px;
+}
+
+#p2 {
+    margin-right: 60px
 }
 
 #weight,

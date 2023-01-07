@@ -1,11 +1,12 @@
 <template>
     <div id="add_weight">
-      <v-text-field id="input" label="Your Weight" v-model="weight" size="100%"></v-text-field>
+      <v-text-field id="input" label="Your Weight today" v-model="weight" size="100%"></v-text-field>
       <button @click="addWeight">Add</button>
     </div>
   </template>
   
   <script>
+
   export default {
     name: "AddWeight",
     data: function() {
@@ -17,9 +18,11 @@
     methods: {
       addWeight: function() {
         if (this.weight.length > 0) {
+          var dateNow = new Date(Date.now())
+          var date = dateNow.toString().substr(4, 11)
           this.$emit("weightAdded", {
             weight: this.weight,
-            date: ""
+            date: date
           });
           this.weight = 0;
           this.date = "";

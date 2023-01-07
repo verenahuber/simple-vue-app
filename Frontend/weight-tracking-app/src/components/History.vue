@@ -6,13 +6,13 @@
   <div>
     <ListWeight
       id="ListWeight"
-      v-for="(singleEntry, index) of listOfEntries"
+      v-for="(singleEntry, index) of listOfEntries.slice().reverse()"
       :key="index"
       :entry="singleEntry"
       :index="index"
       @weightRemoved="removeWeight"
-      @weightEdited="editWeight"
-    ></ListWeight>
+      @weightEdited="editWeight">
+    </ListWeight>
   </div>
 </template>
 

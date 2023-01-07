@@ -1,4 +1,5 @@
 <template>
+  <v-app>
   <header> 
     <h3>Overview</h3>
     <h1>Home</h1> 
@@ -14,6 +15,7 @@
     <AddWeight @weightAdded="addWeight"> </AddWeight>
   </div>
   </div>
+</v-app>
 </template>
 
 <script>
@@ -32,6 +34,12 @@ export default {
     WeightChart,
     BMI
   },
+  data: function() {
+    return {
+      listOfEntries: [],
+      test: [0, 4, 2, 7, 6, 9, 4, 8, 0, 0, 2, 7, 3, 10, 5]
+    };
+  },
   methods: {
   addWeight: function(e) {
       axios
@@ -44,6 +52,12 @@ export default {
         });
     },
   },
+  mounted() {
+    axios
+      .get("http://localhost:8080/weight/").then(response => {
+      this.ListOfEntries = response.data;
+    });
+  }
   }
 
 </script>

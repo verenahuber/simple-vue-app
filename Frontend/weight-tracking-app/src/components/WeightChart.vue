@@ -1,14 +1,21 @@
 <template>
     <div id="weight_chart">
-      <p> WeightChart ... maybe </p>
-    </div>
-    <div class="chart">
+      <p> Weight Chart</p>
+      <v-sparkline
+        :value="test"
+        smooth="10"
+      ></v-sparkline>
     </div>
 </template>
   
 <script>
   export default {
-    name: "WeightChart"
+    name: "WeightChart",
+    data: function() {
+    return {
+      test: [0, 4, 2, 7, 6, 9, 4, 8, 0, 0, 2, 7, 3, 10, 5]
+    };
+  },
   };
 </script>
 
