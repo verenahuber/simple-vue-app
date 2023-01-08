@@ -58,8 +58,7 @@ export default {
       this.listOfEntries = response.data;
     });
   }
-  }
-
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

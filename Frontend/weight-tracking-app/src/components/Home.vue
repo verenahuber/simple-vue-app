@@ -1,5 +1,4 @@
 <template>
-  <v-app>
   <header> 
     <h3>Overview</h3>
     <h1>Home</h1> 
@@ -15,7 +14,6 @@
     <AddWeight @weightAdded="addWeight"> </AddWeight>
   </div>
   </div>
-</v-app>
 </template>
 
 <script>
@@ -58,8 +56,7 @@ export default {
       this.ListOfEntries = response.data;
     });
   }
-  }
-
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -6,6 +6,7 @@
             v-show="isEditable" 
             label="Your Weight" 
             v-model="entry.weight" 
+            size="100%"
             @focusout="editWeight"
             ref="input">
         </v-text-field>
@@ -14,7 +15,7 @@
         <button @click="removeWeight">Remove</button>
     </div>
 </template>
-  
+
 <script>
 export default {
     name: "ListWeight",
@@ -55,6 +56,10 @@ export default {
 </script>
 
 <style scoped>
+ div {
+    display: flex;
+  }
+  
 #ListWeight{
     display: flex;
     flex-direction: row;
@@ -66,12 +71,12 @@ export default {
     align-items: center;
 }
 p {
-    margin-left: -52px;
+    margin-left: -35px;
     margin-right: 10px;
 }
 
 #p2 {
-    margin-right: 60px
+    margin-right: 10px
 }
 
 #weight,
