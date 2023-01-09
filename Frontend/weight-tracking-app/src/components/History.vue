@@ -1,9 +1,10 @@
 <template>
+  <div id="back_header"></div>
   <header> 
     <h3>Weight</h3>
     <h1>History</h1> 
   </header>
-  <div>
+  <div id="weight_list">
     <ListWeight
       id="ListWeight"
       v-for="(singleEntry, index) of listOfEntries.slice().reverse()"
@@ -65,18 +66,35 @@ export default {
 <style scoped>
 
 header {
-margin-bottom: 33px;
-margin-left: 13px;
+  margin-bottom: 70px;
+  position: fixed;
+  z-index: 2;
+}
+
+#back_header{
+  background-color: #FAFCFE;
+  width: 100vh;
+  height: 18vh;
+  position: fixed;
+  z-index: 1;
+  left: -28px;
+  top: -28px;
 }
 
 h1{
   font-size: 35px;
+  margin-left: 13px;
 }
 
 h3{
   margin-bottom: -2px;
+  margin-left: 13px;
   font-size: 18px;
   color: #AFB0B8;
+}
+
+#weight_list {
+  margin-top: 110px;
 }
 
 </style>

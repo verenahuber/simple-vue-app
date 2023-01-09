@@ -68,12 +68,12 @@ margin-left: 13px;
 }
 
 h1{
-  font-size: 35px;
+  font-size: 38px;
 }
 
 h3{
   margin-bottom: -2px;
-  font-size: 18px;
+  font-size: 20px;
   color: #AFB0B8;
 }
 

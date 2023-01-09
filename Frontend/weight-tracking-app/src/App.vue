@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
    <Navbar/>
    <router-view></router-view>
   </div>
@@ -20,14 +20,13 @@ export default {
 
 <style>
 #app {
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   color: #202020;
   background-color: #FAFCFE;
-  padding: 28px;
+  padding: 35px 28px 0 28px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
-
 
 </style>

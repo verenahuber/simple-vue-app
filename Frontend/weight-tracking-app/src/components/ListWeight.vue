@@ -66,17 +66,17 @@ export default {
     margin-bottom: 20px;
     padding-left: 15px;
     font-size: 20px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.2);
     border-radius: 13px;
     align-items: center;
 }
 p {
-    margin-left: -35px;
-    margin-right: 10px;
+    margin-left: -55px;
+    margin-right: 20px;
 }
 
 #p2 {
-    margin-right: 10px
+    margin-right: 47.5px;
 }
 
 #weight,
@@ -89,7 +89,7 @@ button{
   background-color: #6D60FF;
   border: none;
   color: white;
-  padding: 15px 15px;
+  padding: 13px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
