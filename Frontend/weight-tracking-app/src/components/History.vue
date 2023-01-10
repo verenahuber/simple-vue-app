@@ -95,6 +95,7 @@ h3{
 
 #weight_list {
   margin-top: 110px;
+  margin-bottom: 16vh;
 }
 
 </style>

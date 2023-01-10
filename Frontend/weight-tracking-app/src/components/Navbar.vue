@@ -1,22 +1,23 @@
 <template>
   <div class="navbar">
     <div class="nav_buttons">
-      <v-btn class="buttons" icon="home">
+      <v-btn icon="mdi-home" size="70" flat>
         <router-link to="/">
-          <v-icon>mdi-home</v-icon>
+          <v-icon size="40">mdi-home</v-icon>
         </router-link>
       </v-btn>
-      <v-btn class="buttons" icon="history">
+      <div id="gap">
+      <v-btn icon="history" size="70" flat>
         <router-link to="/history">
-          <v-icon>mdi-history</v-icon>
+          <v-icon size="40">mdi-history</v-icon>
         </router-link>
       </v-btn>
-      <v-btn class="buttons" icon="account">
+    </div>
+      <v-btn icon="account" size="70" flat> 
         <router-link to="/settings">
-          <v-icon>mdi-account</v-icon>
+          <v-icon size="40">mdi-account</v-icon>
         </router-link>
       </v-btn>
-    
     </div>
   </div>
 </template>
@@ -27,8 +28,7 @@ export default {
   props: {
     msg: String
   }
-  };
-
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -38,36 +38,31 @@ export default {
   justify-content: center;
   align-items: center;
   font-size: 28px;
-  padding: 35px 20px 40px;
+  padding: 30px 20px 25px;
   position: fixed;
   bottom: 0;
   width: 100%;
   margin: 0;
-  right: 2px;
+  right: 1.5px;
   background-color: #FAFCFE;
+  z-index: 1;
 }
 .navbar .nav_buttons {
   display: flex;
   align-items: center;
 }
 .navbar .nav_buttons a {
-  padding: 18px 18px;
-  margin: 0 5px;
+  padding: 13.7px;
   background: #FAFCFE;
   color: grey;
   cursor: pointer;
   text-decoration: none;
   border-radius: 100px;
 }
-.buttons{
-  padding-left: 25px;
-  padding-right: 25px;
+#gap{
+  padding-left: 35px;
+  padding-right: 35px;
 }
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
 .active{
   color:#6D60FF !important;
   background: white !important;

@@ -27,7 +27,6 @@ export default {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 90vh;
 }
 
 </style>

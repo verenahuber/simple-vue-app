@@ -4,7 +4,8 @@
             id="input"   
             v-model="entry.weight" 
             @focusout="editWeight"
-            variant="plain"
+            class="mt-n6" 
+            variant="underlined"
             suffix="kg">
         </v-text-field>
         <span id="p2">{{ entry.date }}</span>
@@ -38,33 +39,27 @@ export default {
 </script>
 
 <style scoped>
- div {
+div {
     display: flex;
-  }
-  
+}
+
 #ListWeight{
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
     padding-left: 15px;
-    font-size: 20px;
-    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 13px;
     align-items: center;
 }
-p {
-    margin-left: -55px;
-    margin-right: 20px;
-}
 
 #p2 {
-    margin-right: 47.5px;
+    margin-right: 55px;
+    color: grey;
 }
 
-#weight,
 #input {
-    width: 80px;
-    text-align: left;
+    width: 100px;
 }
 
 button{
