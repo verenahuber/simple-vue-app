@@ -95,7 +95,7 @@ app.put("/data/:id", function (req, res) {
 });
 
 app.get("/data", function (req, res) {
-    fs.readFile(filename, "utf8", function (err, data) {
+    fs.readFile(filename2, "utf8", function (err, data) {
         res.writeHead(200, {
             "Content-Type": "application/json",
         });

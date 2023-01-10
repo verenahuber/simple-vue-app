@@ -33,10 +33,10 @@ export default {
   name: "Data",
   data: function () {
     return {
-      name: "Name",
+      name: "",
       height: 0,
       age: 0,
-      data: {}
+      daten: []
     };
   },
   methods: {
@@ -46,6 +46,10 @@ export default {
         height: this.height,
         age: this.age
       });
+      axios
+      .get("http://localhost:8080/data/").then(response => {
+      this.daten = response.data;
+    });
       console.log(this.name)
       console.log(this.height)
       console.log(this.age)
@@ -54,7 +58,7 @@ export default {
   mounted() {
     axios
       .get("http://localhost:8080/data/").then(response => {
-      this.data = response.data;
+      this.daten = response.data;
     });
   }
 }

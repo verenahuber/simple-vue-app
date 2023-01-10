@@ -1,10 +1,6 @@
 <template>
     <div id="weight_chart">
       <p> Weight Chart</p>
-      <v-sparkline
-        :value="test"
-        smooth="10"
-      ></v-sparkline>
     </div>
 </template>
   
