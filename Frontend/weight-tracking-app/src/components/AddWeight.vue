@@ -1,12 +1,19 @@
 <template>
     <div id="add_weight">
-      <v-text-field id="input" label="Your Weight today" v-model="weight" size="100%" ></v-text-field>
+      <v-text-field 
+        id="input" 
+        label="Your Weight today" 
+        v-model="weight" 
+        size="100%" 
+        variant="underlined"
+
+      ></v-text-field>
       <button @click="addWeight">Add</button>
     </div>
   </template>
   
   <script>
-
+  
   export default {
     name: "AddWeight",
     data: function() {

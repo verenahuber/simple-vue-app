@@ -24,9 +24,10 @@ export default {
   },
     methods: {
       changeData: function(e) {
-        console.log("test")
+        console.log(e.name)
         axios
         .put("http://localhost:8080/data/0" , {
+          name: e.name,
           height: e.height,
           age: e.age
         })
@@ -53,5 +54,6 @@ h3{
   font-size: 18px;
   color: #AFB0B8;
 }
+
 
 </style>

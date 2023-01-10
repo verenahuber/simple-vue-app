@@ -82,6 +82,7 @@ app.post("/weight", function (req, res) {
 app.put("/data/:id", function (req, res) {
     fs.readFile(filename2, "utf8", function (err, data) {
         let dataAsObject = JSON.parse(data);
+        dataAsObject[req.params.id].name = req.body.name;
         dataAsObject[req.params.id].height = req.body.height;
         dataAsObject[req.params.id].age = req.body.age;
         fs.writeFile(filename2, JSON.stringify(dataAsObject), () => {
@@ -90,6 +91,15 @@ app.put("/data/:id", function (req, res) {
             });
             res.end(JSON.stringify(dataAsObject));
         });
+    });
+});
+
+app.get("/data", function (req, res) {
+    fs.readFile(filename, "utf8", function (err, data) {
+        res.writeHead(200, {
+            "Content-Type": "application/json",
+        });
+        res.end(data);
     });
 });
 
