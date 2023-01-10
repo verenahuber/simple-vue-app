@@ -1,16 +1,12 @@
 <template>
     <div id="ListWeight">
-        <span v-show="!isEditable" id="weight" @click="editWeight">{{ entry.weight }}</span>
         <v-text-field 
-            id="input" 
-            v-show="isEditable" 
-            label="Your Weight" 
+            id="input"   
             v-model="entry.weight" 
-            size="100%"
             @focusout="editWeight"
-            ref="input">
+            variant="plain"
+            suffix="kg">
         </v-text-field>
-        <p id="p1">kg</p>
         <span id="p2">{{ entry.date }}</span>
         <button @click="removeWeight">Remove</button>
     </div>
@@ -32,24 +28,10 @@ export default {
             });
         },
         editWeight: function () {
-            if (this.isEditable) {
-                this.isEditable = false;
-                this.$emit("weightEdited", {
+            this.$emit("weightEdited", {
                     index: this.index,
                     weight: this.entry.weight
                 });
-            } else {
-                this.isEditable = true;
-
-                // Focus the component, but we have to wait
-                // so that it will be showing first.
-                this.$nextTick().then(() => {
-                    this.focusInput();
-                });
-            }
-        },
-        focusInput() {
-            this.$refs.input.focus();
         }
     }
 };

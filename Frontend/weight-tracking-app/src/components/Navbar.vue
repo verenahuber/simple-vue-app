@@ -1,9 +1,22 @@
 <template>
   <div class="navbar">
     <div class="nav_buttons">
-      <div class="rounded-cicle"><router-link to="/"><v-icon id="icon">mdi-home</v-icon></router-link></div>
-      <button id="btn_2"><router-link to="/history"><v-icon>mdi-history</v-icon></router-link></button>
-      <button><router-link to="/settings"><v-icon>mdi-account</v-icon></router-link></button>
+      <v-btn class="buttons" icon="home">
+        <router-link to="/">
+          <v-icon>mdi-home</v-icon>
+        </router-link>
+      </v-btn>
+      <v-btn class="buttons" icon="history">
+        <router-link to="/history">
+          <v-icon>mdi-history</v-icon>
+        </router-link>
+      </v-btn>
+      <v-btn class="buttons" icon="account">
+        <router-link to="/settings">
+          <v-icon>mdi-account</v-icon>
+        </router-link>
+      </v-btn>
+    
     </div>
   </div>
 </template>
@@ -46,7 +59,7 @@ export default {
   text-decoration: none;
   border-radius: 100px;
 }
-#btn_2{
+.buttons{
   padding-left: 25px;
   padding-right: 25px;
 }

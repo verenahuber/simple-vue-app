@@ -5,7 +5,7 @@
         label="Your Weight today" 
         v-model="weight" 
         size="100%" 
-        variant="underlined"
+        variant="plain"
 
       ></v-text-field>
       <button @click="addWeight">Add</button>
