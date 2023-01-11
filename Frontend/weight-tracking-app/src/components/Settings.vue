@@ -5,8 +5,13 @@
   </header>
   <div>
   <div>
-  <Data @dataChanged="changeData" ></Data>
+  <Data 
+  @dataChanged="changeData"
+  :data = daten>
+  <!-- :data = daten[0] -->
+  </Data>
   </div>
+  <p> {{ daten[0] }}</p>
 </div>
 </template>
 
@@ -18,6 +23,11 @@ export default {
   name: "Settings",
   props: {
     msg: String
+  },
+  data: function() {
+    return {
+      daten: []
+    };
   },
   components:{
     Data
@@ -31,8 +41,15 @@ export default {
           height: e.height,
           age: e.age
         })
-    },
     }
+    },
+    mounted() {
+    axios
+      .get("http://localhost:8080/data/").then(response => {
+      this.daten = response.data;
+    });
+    
+  }
   }
 
 </script>

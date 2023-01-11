@@ -5,7 +5,14 @@
   </header>
   <div>
   <div>
-    <BMI></BMI>
+    <BMI
+      :weight = 79
+      :height = 1.73>
+      <!-- 
+      :weight = weightData[weightData.length-1].weight
+      :height = heightData[0].height 
+      -->
+    </BMI>
   </div>
   <div>
     <WeightChart></WeightChart>
@@ -34,8 +41,8 @@ export default {
   },
   data: function() {
     return {
-      listOfEntries: [],
-      test: [0, 4, 2, 7, 6, 9, 4, 8, 0, 0, 2, 7, 3, 10, 5]
+      weightData: [],
+      heightData: []
     };
   },
   methods: {
@@ -46,14 +53,18 @@ export default {
           date: e.date
         })
         .then(response => {
-          this.listOfEntries = response.data;
+          this.weightData = response.data;
         });
     },
   },
   mounted() {
     axios
       .get("http://localhost:8080/weight/").then(response => {
-      this.ListOfEntries = response.data;
+      this.weightData = response.data;
+    });
+    axios
+      .get("http://localhost:8080/data/").then(response => {
+      this.heightData = response.data;
     });
   }
   };

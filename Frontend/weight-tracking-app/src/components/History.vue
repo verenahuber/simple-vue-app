@@ -42,7 +42,7 @@ export default {
           weight: e.weight
         })
         .then(response => {
-          this.listOfEntries = response.data; //TODO: change this, do not return full list
+          this.listOfEntries = response.data; 
         });
     },
     removeWeight: function(e) {

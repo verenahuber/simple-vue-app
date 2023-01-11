@@ -4,17 +4,19 @@ STYLING
 - NavBar Buttons
 - ListWeight Input in Textfeld vergrößern
 - ListWeight/AddWeight Button zu v-btn
+- BMI stylen
+- WeightChart mit chart.js anschauen
 
 TECHNISCHES
 - BMI 
-    --> aktualisieren, wenn in Componente AddWeight Gewicht geadded wird
-    --> Cases für Gewichtzustand
-    --> Rechnung als Funktion?
+    --> Problem lösen
 - WeightChart
+    --> Daten importieren
 - AddWeight Input disable
-- Data Inputfelder mit aktuellen Zahlen füllen
+- Data Inputfelder mit aktuellen Daten füllen
 
 PROBLEME ZU LÖSEN
-- get-Abfrage in Data 
-    --> daten[0].name etc. funktioniert nur so lange die Seite nicht refreshed wird
-- selbe bei BMI
+- anzeigen von Array-Element funkt nicht 
+    --> BMI berechnen in Home - Z.12/13
+    --> anzeigen von Daten in Settings - Z.11
+    --> anzeigen mit <p> funkt auch nach Aktualisierung

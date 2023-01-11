@@ -3,14 +3,14 @@
     <v-text-field 
       id="input" 
       label="Your Name" 
-      v-model="name" 
+      v-model="data.name" 
       size="100%"
       variant="underlined"
     ></v-text-field>
     <v-text-field 
       id="input" 
       label="Your Height" 
-      v-model="height" 
+      v-model="data.height" 
       suffix="meters"
       size="100%"
       variant="underlined"
@@ -18,7 +18,7 @@
     <v-text-field 
       id="input" 
       label="Your Age" 
-      v-model="age" 
+      v-model="data.age" 
       size="100%"
       variant="underlined"
     ></v-text-field>
@@ -27,39 +27,22 @@
 </template>
 
 <script>
-import axios from "axios"
+import axios from 'axios'
 
 export default {
   name: "Data",
-  data: function () {
-    return {
-      name: "",
-      height: 0,
-      age: 0,
-      daten: []
-    };
-  },
+  props: ["data"],
   methods: {
     changeData: function () {
       this.$emit("dataChanged", {
-        name: this.name,
-        height: this.height,
-        age: this.age
+        name: this.data.name,
+        height: this.data.height,
+        age: this.data.age
       });
-      axios
-      .get("http://localhost:8080/data/").then(response => {
-      this.daten = response.data;
-    });
-      console.log(this.name)
-      console.log(this.height)
-      console.log(this.age)
+      console.log(this.data.name)
+      console.log(this.data.height)
+      console.log(this.data.age)
     }
-  },
-  mounted() {
-    axios
-      .get("http://localhost:8080/data/").then(response => {
-      this.daten = response.data;
-    });
   }
 }
 

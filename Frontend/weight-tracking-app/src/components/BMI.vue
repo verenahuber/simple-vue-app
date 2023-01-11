@@ -1,44 +1,47 @@
 <template>
     <div id="bmi">
-      <p> BMI funkt noch nicht 100% bitte nichts verändern:)</p>
-      <!-- <p> {{ weightData[weightData.length-1] }} </p>
-      <p> {{ heightData[0] }} </p> -->
-      <p> {{ bmiBerechnen }}</p>
+      <h1 @click="calculateBmi"> {{ bmi }} </h1>
+      <p :style="{'color': color}"> {{ result }} </p>
     </div>
 </template>
   
 <script>
-import axios from "axios"
 
 export default {
   name: "BMI",
+  props: ["weight", "height"],
   data: function() {
     return {
-      weightData: [],
-      heightData: []
+      result: 'result',
+      bmi: 0,
+      color: ''
     };
   },
   methods: {
-    bmiBerechnen: function(){
-      if (heightData[0].height && weightData[weightData.length-1].weight != 0){
-        var bmi = weightData[this.weightData.length-1].weight / Math.pow(heightData[0].height, 2);
-        return bmi
-      } else {
-        const fehler = "not enough data";
-        return fehler
+    calculateBmi() {
+      console.log(this.weight, this.height)
+      this.bmi = Math.round((this.weight / Math.pow((this.height), 2))*100)/100
+      console.log(this.bmi)
+      if(this.weight === '' || this.height === '') {
+        this.result = 'No Data'
       }
-    }
+
+      if(this.bmi < 18.5 && this.bmi > 0) {
+        this.result = 'Underweight'
+        this.colorData = 'blue'
+      }else if(this.bmi >=18.5 && this.bmi < 24.9) {
+        this.result = 'Normal'
+        this.color = 'green'
+      }else if(this.bmi >=24.9 && this.bmi < 29.9) {
+        this.result = 'Overweight'
+        this.color = 'orange'
+      }else if(this.bmi >= 29.9){
+        this.result = 'Obesity'
+        this.color = 'red'
+      }
+      console.log(this.result, this.color)
+      }
   },
-  mounted() {
-    axios
-      .get("http://localhost:8080/data/").then(response => {
-      this.heightData = response.data;
-    });
-    axios
-      .get("http://localhost:8080/weight/").then(response => {
-      this.weightData = response.data;
-    });
-  }
 }
 </script>
 
