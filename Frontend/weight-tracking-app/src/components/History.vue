@@ -66,7 +66,6 @@ export default {
 <style scoped>
 
 header {
-  margin-bottom: 70px;
   position: fixed;
   z-index: 2;
 }
@@ -74,7 +73,7 @@ header {
 #back_header{
   background-color: #FAFCFE;
   width: 100vh;
-  height: 18vh;
+  height: 20vh;
   position: fixed;
   z-index: 1;
   left: -28px;
@@ -82,19 +81,21 @@ header {
 }
 
 h1{
-  font-size: 35px;
+  font-size: 38px;
+  font-weight: 500;
   margin-left: 13px;
 }
 
 h3{
-  margin-bottom: -2px;
+  margin-bottom: -4px;
   margin-left: 13px;
-  font-size: 18px;
+  font-size: 21px;
   color: #AFB0B8;
+  font-weight: 500;
 }
 
 #weight_list {
-  margin-top: 110px;
+  margin-top: 112px;
   margin-bottom: 16vh;
 }
 

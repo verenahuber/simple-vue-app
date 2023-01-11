@@ -5,7 +5,7 @@
         class="mt-n1" 
         label="Add today's weight" 
         v-model="weight" 
-        size="100%" 
+        size="80%" 
         variant="underlined"
         suffix="kg"
       ></v-text-field>
@@ -51,10 +51,11 @@ div {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
-    padding-left: 15px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 13px;
     align-items: center;
+    background-color: white;
 }
 
 #p2 {
@@ -70,11 +71,12 @@ button{
   background-color: #6D60FF;
   border: none;
   color: white;
-  padding: 17px 15px;
+  padding: 19px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 18.5px;
+  font-weight: 400;
   cursor: pointer;
   border-radius: 0 13px 13px 0;
   margin: 0;

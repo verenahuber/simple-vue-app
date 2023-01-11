@@ -58,17 +58,19 @@ export default {
 <style scoped>
 
 header {
-margin-bottom: 33px;
-margin-left: 13px;
+margin-bottom: 30px;
+margin-left: 18px;
 }
 
 h1{
-  font-size: 35px;
+  font-size: 38px;
+  font-weight: 500;
 }
 
 h3{
-  margin-bottom: -2px;
-  font-size: 18px;
+  margin-bottom: -4px;
+  font-size: 21px;
+  font-weight: 500;
   color: #AFB0B8;
 }
 

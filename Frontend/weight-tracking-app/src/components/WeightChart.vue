@@ -1,13 +1,11 @@
 <template>
-  <div id="weight_chart">
-    <p> WeightChart </p>
+    <h3>Statistics</h3>
     <div>
       <Line
       :options="chartOptions"
       :data="chartData"
       />
     </div>
-  </div>
 </template>
 
 <script>
@@ -47,17 +45,10 @@
 
 <style scoped>
 
-#weight_chart{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    padding-left: 15px;
-    font-size: 20px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 13px;
-    height: 200px;
-    width: 100%;
+h3 {
+  font-size: 21px;
+  margin-bottom: 30px;
+  font-weight: 500;
 }
-
 
 </style>

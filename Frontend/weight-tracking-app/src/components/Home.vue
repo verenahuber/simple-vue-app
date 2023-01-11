@@ -3,8 +3,13 @@
     <h3>Overview</h3>
     <h1>Home</h1> 
   </header>
-  <div>
+  <div id="home_container">
   <div id="bmi_weight">
+    <CurrentWeight
+      :weightCurrent = 65
+      :weightOld = 66>
+    </CurrentWeight>
+    <div id="space" ></div>
     <BMI
       :weight = 79
       :height = 1.73>
@@ -13,12 +18,8 @@
       :height = heightData[0].height 
       -->
     </BMI>
-    <CurrentWeight
-      :weightCurrent = 65
-      :weightOld = 66>
-    </CurrentWeight>
   </div>
-  <div>
+  <div id="weight_chart">
     <WeightChart></WeightChart>
   </div>
   <div>
@@ -80,23 +81,45 @@ export default {
 <style scoped>
 
 header {
-margin-bottom: 33px;
-margin-left: 13px;
+margin-bottom: 30px;
+margin-left: 18px;
+}
+
+#home_container {
+  padding-bottom: 40px;
 }
 
 h1{
   font-size: 38px;
+  font-weight: 500;
 }
 
 h3{
-  margin-bottom: -2px;
-  font-size: 20px;
+  margin-bottom: -4px;
+  font-size: 21px;
+  font-weight: 500;
   color: #AFB0B8;
 }
 
 #bmi_weight{
   display: flex;
   flex-direction: row;
+  margin-bottom: 30px;
+}
+
+#space {
+  margin-left: 30px ;
+}
+
+#weight_chart {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 13px;
+  width: 100%;
+  background-color: white;
 }
 
 </style>

@@ -1,21 +1,21 @@
 <template>
   <div class="navbar">
     <div class="nav_buttons">
-      <v-btn icon="mdi-home" size="70" flat>
+      <v-btn icon="mdi-home" size="x-large" flat>
         <router-link to="/">
-          <v-icon size="40">mdi-home</v-icon>
+          <v-icon size="39" class="ma-n1">mdi-home</v-icon>
         </router-link>
       </v-btn>
       <div id="gap">
-      <v-btn icon="history" size="70" flat>
+      <v-btn icon="history" size="x-large" flat>
         <router-link to="/history">
-          <v-icon size="40">mdi-history</v-icon>
+          <v-icon size="39" class="ma-n1">mdi-history</v-icon>
         </router-link>
       </v-btn>
     </div>
-      <v-btn icon="account" size="70" flat> 
+      <v-btn icon="account" size="x-large" flat> 
         <router-link to="/settings">
-          <v-icon size="40">mdi-account</v-icon>
+          <v-icon size="39" class="ma-n1">mdi-account</v-icon>
         </router-link>
       </v-btn>
     </div>
@@ -38,7 +38,7 @@ export default {
   justify-content: center;
   align-items: center;
   font-size: 28px;
-  padding: 30px 20px 25px;
+  padding: 27px 0px 40px;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -52,7 +52,7 @@ export default {
   align-items: center;
 }
 .navbar .nav_buttons a {
-  padding: 13.7px;
+  padding: 17px;
   background: #FAFCFE;
   color: grey;
   cursor: pointer;
@@ -60,12 +60,12 @@ export default {
   border-radius: 100px;
 }
 #gap{
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .active{
   color:#6D60FF !important;
-  background: white !important;
-  box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(255, 255, 255) !important;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
 }
 </style>

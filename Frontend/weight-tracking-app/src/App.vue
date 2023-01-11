@@ -19,8 +19,12 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 #app {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   color: #202020;
   background-color: #FAFCFE;
   padding: 35px 28px 0 28px;
@@ -29,8 +33,6 @@ export default {
   overflow: hidden;
 }
 
-main{
-  background-color: #FAFCFE 
-}
+
 
 </style>

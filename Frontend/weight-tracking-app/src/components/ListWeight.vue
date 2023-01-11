@@ -48,15 +48,16 @@ div {
     flex-direction: row;
     margin-bottom: 20px;
     padding-left: 15px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 13px;
     align-items: center;
     background-color: white;
 }
 
 #p2 {
-    margin-right: 55px;
+    margin-right: 32px;
     color: grey;
+    font-style: italic;
 }
 
 #input {
@@ -67,11 +68,12 @@ button{
   background-color: #6D60FF;
   border: none;
   color: white;
-  padding: 13px 15px;
+  padding: 12px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 18.5px;
+  font-weight: 100;
   cursor: pointer;
   border-radius: 0 13px 13px 0;
   margin: 0;
