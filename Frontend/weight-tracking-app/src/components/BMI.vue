@@ -41,7 +41,7 @@ export default {
       }
       console.log(this.result, this.color)
       }
-  },
+  }
 }
 </script>
 

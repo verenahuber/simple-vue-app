@@ -3,7 +3,7 @@
       <v-text-field 
         id="input" 
         class="mt-n1" 
-        label="Your Weight today" 
+        label="Add today's weight" 
         v-model="weight" 
         size="100%" 
         variant="underlined"

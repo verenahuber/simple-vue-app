@@ -1,6 +1,6 @@
 <template>
   <div>
-   <Navbar/>
+   <Navbar></Navbar>
    <router-view></router-view>
   </div>
 </template>
@@ -27,6 +27,10 @@ export default {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+main{
+  background-color: #FAFCFE 
 }
 
 </style>

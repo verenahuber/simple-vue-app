@@ -51,6 +51,7 @@ div {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 13px;
     align-items: center;
+    background-color: white;
 }
 
 #p2 {
