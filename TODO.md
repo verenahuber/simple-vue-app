@@ -10,6 +10,7 @@ STYLING
 
 TECHNISCHES
 - AddWeight Input disable
+- btn für Chart wechseln
 
 PROBLEME ZU LÖSEN
 - anzeigen von Array-Element funkt nicht 

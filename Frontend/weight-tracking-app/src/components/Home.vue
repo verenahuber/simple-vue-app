@@ -6,8 +6,8 @@
   <div id="home_container">
   <div id="bmi_weight">
     <CurrentWeight
-      :weightCurrent = 65
-      :weightOld = 66>
+      :weightCurrent = weightData[weightData.length-1]
+      :weightOld = weightData[weightData.length-2]>
       <!--
         :weightCurrent = weightData[weightData.length-1].weight
         :weightOld = weightData[weightData.length-2].weight
@@ -25,8 +25,8 @@
   </div>
   <div id="weight_chart">
     <WeightChart
-      :label = "[1, 2, 3, 4, 5, 6, 7]"
-      :chartData = "[1, 2, 3, 4, 5, 6, 7]">
+      :label = "[]"
+      :chartData = "[]">
       <!-- :label = "label"
       :chartData = "chartData" -->
     </WeightChart>
@@ -86,6 +86,7 @@ export default {
       console.log(this.label)
       console.log(this.chartData)
     });
+    console.log('w' + this.weightData)
     axios
       .get("http://localhost:8080/data/").then(response => {
       this.heightData = response.data;

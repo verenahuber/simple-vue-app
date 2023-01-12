@@ -1,7 +1,7 @@
 <template>
     <div id="weight">
       <h3>Weight</h3>
-      <h2 @click="calculateWeightLoss"> {{ weightCurrent }} kg</h2>
+      <h2 @click="calculateWeightLoss"> {{ weightCurrent.weight }} kg</h2>
       <p :style="{'color': color}"> {{ weightLoss }} kg</p>
     </div>
 </template>
@@ -10,7 +10,18 @@
 
 export default {
   name: "BMI",
-  props: ["weightCurrent","weightOld"],
+  props: {
+    weightCurrent: {
+      type: Promise,
+      required: true,
+      default: 10
+    },  
+    weightOld: {
+      type: Promise,
+      required: true,
+      default: 10
+    },
+  },
   data: function() {
     return {
       weightLoss: 0,
@@ -19,9 +30,9 @@ export default {
   },
   methods: {
     calculateWeightLoss() {
-      this.weightLoss = this.weightCurrent - this.weightOld
+      this.weightLoss = this.weightCurrent.weight - this.weightOld.weight
       console.log(this.weightLoss)
-      if(this.weightCurrent === '' || this.weightOld === '') {
+      if(this.weightCurrent.weight === '' || this.weightOld.weight === '') {
         this.weightLoss = 0
       }
       if(this.weightLoss < 0) {
