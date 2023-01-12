@@ -33,6 +33,14 @@ export default {
   overflow: hidden;
 }
 
+img {
+  position: fixed;
+  right: 0;
+  margin-right: 50px;
+  top: 37px;
+  height: 67px;
+  z-index: 3;
+}
 
 
 </style>

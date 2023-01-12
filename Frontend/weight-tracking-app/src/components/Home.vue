@@ -2,6 +2,7 @@
   <header> 
     <h3>Overview</h3>
     <h1>Home</h1> 
+    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063222023310028810/waage_8.png" >
   </header>
   <div id="home_container">
   <div id="bmi_weight">
@@ -60,7 +61,7 @@ export default {
       weightData: [],
       heightData: [],
       label: [],
-      chartData: []
+      chartData: [],
     };
   },
   methods: {
@@ -114,8 +115,7 @@ h1{
 
 h3{
   margin-bottom: -4px;
-  font-size: 21px;
-  font-weight: 500;
+  font-size: 19px;
   color: #AFB0B8;
 }
 
@@ -138,6 +138,14 @@ h3{
   border-radius: 13px;
   width: 100%;
   background-color: white;
+}
+
+img {
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  top: 37px;
+  height: 67px;
 }
 
 </style>

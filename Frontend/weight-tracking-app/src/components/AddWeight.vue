@@ -75,8 +75,7 @@ button{
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 18.5px;
-  font-weight: 400;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 0 13px 13px 0;
   margin: 0;

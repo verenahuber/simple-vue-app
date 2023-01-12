@@ -61,7 +61,7 @@ export default {
 
 h3 {
   font-size: 21px;
-  font-weight: 500;
+  margin-left: -1px;
 }
 
 h2 {
@@ -69,7 +69,7 @@ h2 {
   font-weight: 500;
   margin-top: 20px;
   color: #6D60FF;
-  margin-bottom: -4px;
+  margin-bottom: -3px;
   margin-left: -1px;
 }
 

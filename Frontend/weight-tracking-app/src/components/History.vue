@@ -1,9 +1,9 @@
 <template>
-  <div id="back_header"></div>
   <header> 
     <h3>Weight</h3>
     <h1>History</h1> 
   </header>
+  <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063222023310028810/waage_8.png" >
   <div id="weight_list">
     <ListWeight
       id="ListWeight"
@@ -59,7 +59,7 @@ export default {
       this.listOfEntries = response.data;
     });
   }
-  };
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -68,35 +68,30 @@ export default {
 header {
   position: fixed;
   z-index: 2;
-}
-
-#back_header{
   background-color: #FAFCFE;
   width: 100vh;
-  height: 20vh;
-  position: fixed;
-  z-index: 1;
-  left: -28px;
-  top: -28px;
+  height: 11.5vh;
+  left: 0;
+  top: 0;
 }
 
 h1{
   font-size: 38px;
   font-weight: 500;
-  margin-left: 13px;
+  margin-left: 46px;
 }
 
 h3{
   margin-bottom: -4px;
-  margin-left: 13px;
-  font-size: 21px;
+  margin-left: 46px;
+  margin-top: 35px;
+  font-size: 19px;
   color: #AFB0B8;
-  font-weight: 500;
 }
 
 #weight_list {
   margin-top: 112px;
-  margin-bottom: 16vh;
+  margin-bottom: 16.4vh;
 }
 
 </style>

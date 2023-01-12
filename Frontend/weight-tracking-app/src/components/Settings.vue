@@ -2,17 +2,18 @@
     <header> 
     <h3>Personal</h3>
     <h1>Settings</h1> 
+    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063222023310028810/waage_8.png" >
   </header>
-  <div>
-  <div>
+  <div id="container_settings">
   <Data 
   @dataChanged="changeData"
   :data = daten>
   <!-- :data = daten[0] -->
   </Data>
+  
   </div>
-  <p> {{ daten[0] }}</p>
-</div>
+  <p> {{ daten[0] }}</p> 
+  
 </template>
 
 <script>
@@ -61,6 +62,9 @@ header {
 margin-bottom: 30px;
 margin-left: 18px;
 }
+#container_settings {
+  margin-bottom: 30vh;
+}
 
 h1{
   font-size: 38px;
@@ -69,8 +73,7 @@ h1{
 
 h3{
   margin-bottom: -4px;
-  font-size: 21px;
-  font-weight: 500;
+  font-size: 19px;
   color: #AFB0B8;
 }
 
