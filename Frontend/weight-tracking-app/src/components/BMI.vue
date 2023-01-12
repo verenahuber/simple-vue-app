@@ -29,7 +29,7 @@ export default {
 
       if(this.bmi < 18.5 && this.bmi > 0) {
         this.result = 'Under Weight'
-        this.colorData = 'blue'
+        this.color = 'blue'
       }else if(this.bmi >=18.5 && this.bmi < 24.9) {
         this.result = 'Normal Weight'
         this.color = 'green'

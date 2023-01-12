@@ -14,6 +14,7 @@ export default {
   data: function() {
     return {
       weightLoss: 0,
+      color: ''
     };
   },
   methods: {
@@ -22,6 +23,11 @@ export default {
       console.log(this.weightLoss)
       if(this.weightCurrent === '' || this.weightOld === '') {
         this.weightLoss = 0
+      }
+      if(this.weightLoss < 0) {
+        this.color = 'green'
+      }else if(this.weightLoss > 0) {
+        this.color = 'red'
       }
     }
   }

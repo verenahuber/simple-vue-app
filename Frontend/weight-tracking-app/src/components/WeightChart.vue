@@ -26,12 +26,20 @@
   export default {
     name: 'WeightChart',
     components: { Line },
+    props: {
+      label: {
+        type: Array
+      },
+      chartData: {
+        type: Array
+      }
+    },
     data() {
       return {
         chartData: {
-          labels: [ 'datum', 'datum', 'datum', 'datum', 'datum', 'datum', 'datum' ],
+          labels: this.label,
           datasets: [ { 
-            data: [65, 67, 63, 66, 65, 67, 59], 
+            data: this.chartData, 
             label: '7 Days',
             borderColor: '#6D60FF'
           }]

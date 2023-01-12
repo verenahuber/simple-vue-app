@@ -21,14 +21,14 @@
     data: function() {
       return {
         weight: 0,
-        date: ""
+        date: "",
+        disable: false
       };
     },
     methods: {
       addWeight: function() {
         if (this.weight.length > 0) {
-          var dateNow = new Date(Date.now())
-          var date = dateNow.toString().substr(4, 11)
+          var date = new Date(Date.now()).toLocaleDateString("en-GB")
           this.$emit("weightAdded", {
             weight: this.weight,
             date: date

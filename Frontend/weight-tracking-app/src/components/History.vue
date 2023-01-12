@@ -10,7 +10,7 @@
       v-for="(singleEntry, index) of listOfEntries.slice().reverse()"
       :key="index"
       :entry="singleEntry"
-      :index="index"
+      :index="listOfEntries.length - index - 1"
       @weightRemoved="removeWeight"
       @weightEdited="editWeight">
     </ListWeight>
