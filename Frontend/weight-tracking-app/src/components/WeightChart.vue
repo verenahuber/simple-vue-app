@@ -32,6 +32,12 @@
         required: true,
         default: []
       },  
+      isweek: { 
+        type: Boolean,
+        required: true,
+        default: true
+      },
+     
       weightData: {
         type: Array,
         required: true,
@@ -39,18 +45,16 @@
       },
     },
     data() {
-      return {
+      return  {
         chartData: {
           labels: this.label,
           datasets: [ { 
             data: [...this.weightData], 
-            label: '7 Days',
             borderColor: '#6D60FF'
           }]
         },
-        chartOptions: {
-        }
-      }
+        label: `${this.isweek ?  'week' : 'month'}`,}
+        
     },
     mounted() {
       this.updateChart();
@@ -64,7 +68,7 @@
           labels: this.label,
           datasets: [ { 
             data: [...this.weightData], 
-            label: '7 Days',
+            label: `${this.isweek ?  'week' : 'month'}`,
             borderColor: '#6D60FF'
           }]
         };

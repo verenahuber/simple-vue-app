@@ -3,7 +3,7 @@
     <h3>Weight</h3>
     <h1>History</h1> 
   </header>
-  <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063473739280433212/waage_9.png" >
+  <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063508237476966450/waage_10.png" >
   <div id="weight_list">
     <ListWeight
       id="ListWeight"

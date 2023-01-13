@@ -2,7 +2,7 @@
   <header> 
     <h3>Overview</h3>
     <h1>Home</h1> 
-    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063473739280433212/waage_9.png" >
+    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063508237476966450/waage_10.png" >
   </header>
   <div id="home_container">
   <div id="bmi_weight">
@@ -20,10 +20,11 @@
   </div>
   <div id="weight_chart">
     <div id="changeButtons"> 
-      <v-btn class="mx-2">Week</v-btn>
-      <v-btn class="mx-2">Month</v-btn>
+      <v-btn @click="isweek=true" class="mx-2">Week</v-btn>
+      <v-btn @click="isweek= false" class="mx-2">Month</v-btn>
     </div>
     <WeightChart
+    :isweek="isweek"
       :label="label"
       :weightData="chartDataPrep">
     </WeightChart>
@@ -58,6 +59,7 @@ export default {
       heightData: [],
       label: [],
       chartDataPrep: [],
+      isweek: true
     };
   },
   methods: {
@@ -78,7 +80,7 @@ export default {
       .get("http://localhost:8080/weight/").then(response => {
       this.weightData = response.data;
       let chartData = [];
-      for (let i=this.weightData.length-1; i >= this.weightData.length-7; i-- ){
+      for (let i=this.weightData.length-1; i >= this.weightData.length- (this.isweek ? 7 : 30); i-- ){
         self.label.push(this.weightData[i].date);
         chartData.push(this.weightData[i].weight);
       }

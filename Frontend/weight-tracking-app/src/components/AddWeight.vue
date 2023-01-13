@@ -15,6 +15,8 @@
   </template>
   
   <script>
+  import BMI from './BMI.vue';
+
   
   export default {
     name: "AddWeight",

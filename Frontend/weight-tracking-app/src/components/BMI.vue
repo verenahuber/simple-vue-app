@@ -32,6 +32,9 @@ export default {
   mounted: function() {
     this.calculateBmi();
   },
+  updated: function(){
+    this.calculateBmi();
+  },
   methods: {
     calculateBmi() {
       console.log(this.weight.weight, this.height.height)
@@ -43,7 +46,7 @@ export default {
 
       if(this.bmi < 18.5 && this.bmi > 0) {
         this.result = 'Underweight'
-        this.color = 'blue'
+        this.color = 'red'
       }else if(this.bmi >=18.5 && this.bmi < 24.9) {
         this.result = 'Normalweight'
         this.color = 'green'

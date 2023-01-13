@@ -32,6 +32,9 @@ export default {
   mounted: function() {
     this.calculateWeightLoss();
   },
+  updated: function(){
+    this.calculateWeightLoss();
+  },
   methods: {
     calculateWeightLoss() {
       this.weightLoss = this.weightCurrent.weight - this.weightOld.weight
