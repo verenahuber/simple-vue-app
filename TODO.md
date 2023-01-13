@@ -8,18 +8,11 @@ STYLING
 
 TECHNISCHES
 
-- BMI
-  --> Problem lösen
-- WeightChart
-  --> Daten importieren
-- AddWeight Input disable
-- Data Inputfelder mit aktuellen Daten füllen
-
 PROBLEME ZU LÖSEN
 
-- anzeigen von Array-Element funkt nicht
-  --> BMI berechnen in Home - Z.12/13
-  --> anzeigen von Daten in Settings - Z.11
-  --> anzeigen mit <p> funkt auch nach Aktualisierung
-- BMI berechnen bei laden von Home Komponente (Funktion in BMI Komponente)
-- Liste andersrum (in Komponente History, v-for & ListWeight bei removeWeight, editWeight index Angabe)
+- BMI berechnen bei laden von Home Komponente (Funktion in BMI Komponente), nicht nur bei Klick -- auch bei CurrentWeight
+- Wie connectet man die Buttons mit den Components und Props von denen
+- Arrays in Component WeightChart
+  --> Definition in Home in mounted() - Z. 73-75
+  --> Nutzung für Props von WeightChart - Z. 21/22
+  --> Arrays sind zum Zeitpunkt, in dem sie oben aufgerufen werden noch nicht gefüllt -- wie anders machen?

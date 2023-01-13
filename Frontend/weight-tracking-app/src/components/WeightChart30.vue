@@ -6,6 +6,8 @@
       :data="chartData"
       />
     </div>
+    <p> {{ label }}</p>
+    <p> {{ weightData }}</p>
 </template>
 
 <script>

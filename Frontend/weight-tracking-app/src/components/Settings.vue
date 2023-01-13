@@ -7,7 +7,7 @@
   <div id="container_settings">
   <Data 
   @dataChanged="changeData"
-  :data = daten>
+  :data = daten[0]>
   <!-- :data = daten[0] -->
   </Data>
   

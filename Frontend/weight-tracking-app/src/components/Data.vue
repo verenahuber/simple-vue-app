@@ -29,11 +29,16 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
   name: "Data",
-  props: ["data"],
+  props: {
+    data: {
+      type: Promise,
+      required: true,
+      default: 10
+    }
+  },
   methods: {
     changeData: function () {
       this.$emit("dataChanged", {

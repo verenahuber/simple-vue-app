@@ -9,27 +9,27 @@
     <CurrentWeight
       :weightCurrent = weightData[weightData.length-1]
       :weightOld = weightData[weightData.length-2]>
-      <!--
-        :weightCurrent = weightData[weightData.length-1].weight
-        :weightOld = weightData[weightData.length-2].weight
-      -->
     </CurrentWeight>
     <div id="space" ></div>
     <BMI
-      :weight = 79
-      :height = 1.73>
-      <!-- 
-      :weight = weightData[weightData.length-1].weight
-      :height = heightData[0].height 
-      -->
+      :weight = weightData[weightData.length-1]
+      :height = heightData[0]>
     </BMI>
   </div>
   <div id="weight_chart">
+    <div id="changeButtons"> 
+      <v-btn class="mx-2"> 7 Days </v-btn>
+      <v-btn class="mx-2"> 30 Days </v-btn>
+      <v-btn
+      class="mx-2" icon fab dark small color="#6D60FF">
+        <v-icon color="white">
+          mid-close
+        </v-icon>
+      </v-btn>
+    </div>
     <WeightChart
-      :label = "[]"
-      :chartData = "[]">
-      <!-- :label = "label"
-      :chartData = "chartData" -->
+      :label = label
+      :weightData = chartData>
     </WeightChart>
   </div>
   <div>
@@ -84,14 +84,12 @@ export default {
         this.label.push(this.weightData[i].date);
         this.chartData.push(this.weightData[i].weight)
       }
-      console.log(this.label)
-      console.log(this.chartData)
-    });
-    console.log('w' + this.weightData)
+      });
     axios
       .get("http://localhost:8080/data/").then(response => {
       this.heightData = response.data;
     });
+    console.log('w' + this.weightData)
   }
   };
 </script>

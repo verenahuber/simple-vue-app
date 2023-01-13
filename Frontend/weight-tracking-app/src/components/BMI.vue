@@ -10,7 +10,18 @@
 
 export default {
   name: "BMI",
-  props: ["weight", "height"],
+  props: {
+    weight: {
+      type: Promise,
+      required: true,
+      default: 10
+    },  
+    height: {
+      type: Promise,
+      required: true,
+      default: 10
+    },
+  },
   data: function() {
     return {
       result: 'result',
@@ -20,10 +31,10 @@ export default {
   },
   methods: {
     calculateBmi() {
-      console.log(this.weight, this.height)
-      this.bmi = Math.round((this.weight / Math.pow((this.height), 2))*100)/100
+      console.log(this.weight.weight, this.height.height)
+      this.bmi = Math.round((this.weight.weight / Math.pow((this.height.height), 2))*100)/100
       console.log(this.bmi)
-      if(this.weight === '' || this.height === '') {
+      if(this.weight.weight === '' || this.height.height === '') {
         this.result = 'No Data'
       }
 
