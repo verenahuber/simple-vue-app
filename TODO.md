@@ -2,16 +2,21 @@
 
 STYLING
 
-- Dropdown für WeightChart ändern
+- Buttons Weight Chart stylen
+- Abstände überall anpassen
+- Header überall gleich machen
+- Buttons klick Zustand hinzufügen
 
 TECHNISCHES
 
-PROBLEME ZU LÖSEN
+1.)
 
-- Wie connectet man die Buttons mit den Components und Props von denen
-- Arrays in Component WeightChart
-  --> Definition in Home in mounted() - Z. 73-75
-  --> Nutzung für Props von WeightChart - Z. 21/22
-  --> Arrays sind zum Zeitpunkt, in dem sie oben aufgerufen werden noch nicht gefüllt -- wie anders machen?
+- Weight Chart Backend --> zusätzliches Array für 30 inputs
 
-- plus/minus bei WeightLoss
+  2.)
+
+- Plus/Minus bei WeightLoss anzeige hinzufügen
+
+  3.)
+
+- falls Zeit noch Add Weight component zusätzlich auf Seite Settings einfügen --> unter Data, damit die Seite nicht so leer ist
