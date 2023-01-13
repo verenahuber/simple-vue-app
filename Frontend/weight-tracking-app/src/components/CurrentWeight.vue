@@ -12,28 +12,32 @@ export default {
   name: "BMI",
   props: {
     weightCurrent: {
-      type: Promise,
+      type: Number,
       required: true,
       default: 10
     },  
     weightOld: {
-      type: Promise,
+      type: Number,
       required: true,
       default: 10
     },
   },
   data: function() {
     return {
+      result: 'result',
       weightLoss: 0,
       color: ''
     };
+  },
+  mounted: function() {
+    this.calculateWeightLoss();
   },
   methods: {
     calculateWeightLoss() {
       this.weightLoss = this.weightCurrent.weight - this.weightOld.weight
       console.log(this.weightLoss)
       if(this.weightCurrent.weight === '' || this.weightOld.weight === '') {
-        this.weightLoss = 0
+        this.result = 'No Data'
       }
       if(this.weightLoss < 0) {
         this.color = 'green'

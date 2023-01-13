@@ -37,8 +37,8 @@ img {
   position: fixed;
   right: 0;
   margin-right: 50px;
-  top: 37px;
-  height: 67px;
+  top: 40px;
+  height: 60px;
   z-index: 3;
 }
 

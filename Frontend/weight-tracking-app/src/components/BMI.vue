@@ -12,12 +12,12 @@ export default {
   name: "BMI",
   props: {
     weight: {
-      type: Promise,
+      type: Number,
       required: true,
       default: 10
     },  
     height: {
-      type: Promise,
+      type: Number,
       required: true,
       default: 10
     },
@@ -29,6 +29,9 @@ export default {
       color: ''
     };
   },
+  mounted: function() {
+    this.calculateBmi();
+  },
   methods: {
     calculateBmi() {
       console.log(this.weight.weight, this.height.height)
@@ -39,13 +42,13 @@ export default {
       }
 
       if(this.bmi < 18.5 && this.bmi > 0) {
-        this.result = 'Under Weight'
+        this.result = 'Underweight'
         this.color = 'blue'
       }else if(this.bmi >=18.5 && this.bmi < 24.9) {
-        this.result = 'Normal Weight'
+        this.result = 'Normalweight'
         this.color = 'green'
       }else if(this.bmi >=24.9 && this.bmi < 29.9) {
-        this.result = 'Over Weight'
+        this.result = 'Overweight'
         this.color = 'orange'
       }else if(this.bmi >= 29.9){
         this.result = 'Obesity'

@@ -28,14 +28,14 @@
     components: { Line },
     props: {
       label: {
-        type: Promise,
+        type: Array,
         required: true,
-        default: 10
+        default: []
       },  
       weightData: {
-        type: Promise,
+        type: Array,
         required: true,
-        default: 10
+        default: []
       },
     },
     data() {
@@ -43,13 +43,32 @@
         chartData: {
           labels: this.label,
           datasets: [ { 
-            data: this.weightData, 
+            data: [...this.weightData], 
             label: '7 Days',
             borderColor: '#6D60FF'
           }]
         },
         chartOptions: {
         }
+      }
+    },
+    mounted() {
+      this.updateChart();
+    },
+    updated() {
+      this.updateChart();
+    },
+    methods: {
+      updateChart() {
+      this.chartData =  {
+          labels: this.label,
+          datasets: [ { 
+            data: [...this.weightData], 
+            label: '7 Days',
+            borderColor: '#6D60FF'
+          }]
+        };
+        console.log("UPDATE" ,this.chartData)
       }
     }
   }

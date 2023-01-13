@@ -2,7 +2,7 @@
     <header> 
     <h3>Personal</h3>
     <h1>Settings</h1> 
-    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063222023310028810/waage_8.png" >
+    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063473739280433212/waage_9.png" >
   </header>
   <div id="container_settings">
   <Data 

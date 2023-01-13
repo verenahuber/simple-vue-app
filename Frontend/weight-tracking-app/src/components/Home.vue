@@ -2,34 +2,30 @@
   <header> 
     <h3>Overview</h3>
     <h1>Home</h1> 
-    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063222023310028810/waage_8.png" >
+    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063473739280433212/waage_9.png" >
   </header>
   <div id="home_container">
   <div id="bmi_weight">
     <CurrentWeight
+      v-if="weightData.length >0 && heightData.length >0"
       :weightCurrent = weightData[weightData.length-1]
       :weightOld = weightData[weightData.length-2]>
     </CurrentWeight>
     <div id="space" ></div>
     <BMI
+      v-if="weightData.length >0 && heightData.length >0"
       :weight = weightData[weightData.length-1]
       :height = heightData[0]>
     </BMI>
   </div>
   <div id="weight_chart">
     <div id="changeButtons"> 
-      <v-btn class="mx-2"> 7 Days </v-btn>
-      <v-btn class="mx-2"> 30 Days </v-btn>
-      <v-btn
-      class="mx-2" icon fab dark small color="#6D60FF">
-        <v-icon color="white">
-          mid-close
-        </v-icon>
-      </v-btn>
+      <v-btn class="mx-2">Week</v-btn>
+      <v-btn class="mx-2">Month</v-btn>
     </div>
     <WeightChart
-      :label = label
-      :weightData = chartData>
+      :label="label"
+      :weightData="chartDataPrep">
     </WeightChart>
   </div>
   <div>
@@ -61,7 +57,7 @@ export default {
       weightData: [],
       heightData: [],
       label: [],
-      chartData: [],
+      chartDataPrep: [],
     };
   },
   methods: {
@@ -77,13 +73,16 @@ export default {
     },
   },
   mounted() {
+    let self = this;
     axios
       .get("http://localhost:8080/weight/").then(response => {
       this.weightData = response.data;
+      let chartData = [];
       for (let i=this.weightData.length-1; i >= this.weightData.length-7; i-- ){
-        this.label.push(this.weightData[i].date);
-        this.chartData.push(this.weightData[i].weight)
+        self.label.push(this.weightData[i].date);
+        chartData.push(this.weightData[i].weight);
       }
+      self.chartDataPrep = chartData;
       });
     axios
       .get("http://localhost:8080/data/").then(response => {
@@ -137,13 +136,4 @@ h3{
   width: 100%;
   background-color: white;
 }
-
-img {
-  position: absolute;
-  right: 0;
-  margin-right: 50px;
-  top: 37px;
-  height: 67px;
-}
-
 </style>

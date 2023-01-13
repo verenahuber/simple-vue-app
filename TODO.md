@@ -2,9 +2,7 @@
 
 STYLING
 
-- ListWeight/AddWeight Button zu v-btn
 - Dropdown für WeightChart ändern
-- Padding auf Home und Settings
 
 TECHNISCHES
 
