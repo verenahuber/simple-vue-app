@@ -1,5 +1,4 @@
 <template>
-    <h3>Statistics</h3>
     <div>
       <Line
       :options="chartOptions"
@@ -79,10 +78,5 @@
 
 <style scoped>
 
-h3 {
-  font-size: 21px;
-  margin-bottom: 30px;
-  margin-left: -1px;
-}
 
 </style>

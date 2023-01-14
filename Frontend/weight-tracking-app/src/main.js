@@ -9,7 +9,7 @@ import History from "./components/History.vue"
 import Settings from "./components/Settings.vue"
 
 
-// import './assets/main.css'
+//import './assets/main.css'
 
 // Vuetify
 import 'vuetify/styles'

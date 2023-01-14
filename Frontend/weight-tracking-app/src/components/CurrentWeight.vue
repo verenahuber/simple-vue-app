@@ -1,8 +1,8 @@
 <template>
-    <div id="weight">
-      <h3>Weight</h3>
+    <div class="container" id="weight">
+      <h4>Weight</h4>
       <h2 @click="calculateWeightLoss"> {{ weightCurrent.weight }} kg</h2>
-      <p :style="{'color': color}"> {{ result }} kg</p>
+      <span :style="{'color': color}"> {{ result }} kg</span>
     </div>
 </template>
   
@@ -56,34 +56,27 @@ export default {
 <style scoped>
 
 #weight{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 13px;
-    height: 162px;
-    width: 100%;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 160px;
+  width: 100%;
 }
-
-h3 {
+h4 {
   font-size: 21px;
-  margin-left: -1px;
+  font-weight: 500;
 }
-
 h2 {
   font-size: 33px;
   font-weight: 500;
   margin-top: 20px;
   color: #6D60FF;
-  margin-bottom: -3px;
-  margin-left: -1px;
+  margin-bottom: -2px;
+  font-weight: 400;
 }
-
-p {
+span {
   font-size: 15px;
-  font-weight: 600;
-  padding-left: 2px;
+  font-style: italic;
 }
 
 

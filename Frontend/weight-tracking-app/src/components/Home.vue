@@ -1,10 +1,10 @@
 <template>
   <header> 
-    <h3>Overview</h3>
-    <h1>Home</h1> 
-    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063508237476966450/waage_10.png" >
+    <h3 class="headline_1">Overview</h3>
+    <h1 class="headline_2">Home</h1> 
+    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063508132757778512/waage_9.png" >
   </header>
-  <div id="home_container">
+  <div class="container_pages">
   <div id="bmi_weight">
     <CurrentWeight
       v-if="weightData.length >0 && heightData.length >0"
@@ -18,10 +18,13 @@
       :height = heightData[0]>
     </BMI>
   </div>
-  <div id="weight_chart">
-    <div id="changeButtons"> 
-      <v-btn @click="isweek=true, changeToWeek" class="mx-2">Week</v-btn>
-      <v-btn @click="isweek=false, changeToMonth" class="mx-2">Month</v-btn>
+  <div class="container" id="weight_chart">
+    <div id="chart"> 
+      <h4>Statistics</h4>
+      <div id="chart_btn">
+      <button class="btn" id="btn_week" @click="isweek=true, changeToWeek" >Week</button>
+      <button class="btn" id="btn_month"  @click="isweek=false, changeToMonth" >Month</button>
+  </div>
     </div>
     <WeightChart
       :isweek="isweek"
@@ -122,36 +125,15 @@ export default {
       this.heightData = response.data;
     });
   },
-  };
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-header {
-margin-bottom: 30px;
-margin-left: 18px;
-}
-
-#home_container {
-  padding-bottom: 40px;
-}
-
-h1{
-  font-size: 38px;
-  font-weight: 500;
-}
-
-h3{
-  margin-bottom: -4px;
-  font-size: 19px;
-  color: #AFB0B8;
-}
-
 #bmi_weight{
   display: flex;
   flex-direction: row;
-  margin-bottom: 30px;
 }
 
 #space {
@@ -159,13 +141,43 @@ h3{
 }
 
 #weight_chart {
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
   padding: 20px;
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 13px;
-  width: 100%;
-  background-color: white;
 }
+
+h4 {
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  margin-left: -1px;
+}
+
+#chart{
+  display: flex;
+  flex-direction: row;
+}
+
+#chart_btn{
+  position: absolute;
+  right: 0;
+  margin-right: 48px;
+}
+
+#btn_week{
+  padding: 6px 12px;
+  border-radius: 10px 0 0 10px;
+  background-color: lightgrey;
+  font-size: 16px;
+}
+
+#btn_month{
+  padding: 6px 12px;
+  border-radius: 0 10px 10px 0;
+  background-color: lightgrey;
+  font-size: 16px;
+}
+
+#btn_month:focus, #btn_week:focus  {
+  background-color: #6D60FF;
+}
+
 </style>

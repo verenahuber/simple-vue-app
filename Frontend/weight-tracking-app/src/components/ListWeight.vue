@@ -1,15 +1,14 @@
 <template>
-    <div id="ListWeight">
-        <v-text-field 
-            id="input"   
+    <div class="container" id="ListWeight">
+        <v-text-field  
             v-model="entry.weight" 
             @focusout="editWeight"
             class="mt-n6" 
             variant="underlined"
             suffix="kg">
         </v-text-field>
-        <span id="p2">{{ entry.date }}</span>
-        <button @click="removeWeight">Remove</button>
+        <span id="date">{{ entry.date }}</span>
+        <button class="btn" id="btn_remove" @click="removeWeight">Remove</button>
     </div>
 </template>
 
@@ -46,36 +45,19 @@ div {
 #ListWeight{
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
-    padding-left: 15px;
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 13px;
+    margin-bottom: 22.2px;
+    padding-left: 20px;
     align-items: center;
-    background-color: white;
 }
 
-#p2 {
+#date {
     margin-right: 32px;
-    color: grey;
     font-style: italic;
 }
 
-#input {
-    width: 100px;
-}
-
-button{
-  background-color: #6D60FF;
-  border: none;
-  color: white;
-  padding: 12px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  cursor: pointer;
+#btn_remove{
+  padding: 12px 17px;
   border-radius: 0 13px 13px 0;
-  margin: 0;
 }
 
 </style>

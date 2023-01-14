@@ -1,10 +1,10 @@
 <template>
     <header> 
-    <h3>Personal</h3>
-    <h1>Settings</h1> 
-    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063508237476966450/waage_10.png" >
+    <h3 class="headline_1">Personal</h3>
+    <h1 class="headline_2">Settings</h1> 
+    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063508132757778512/waage_9.png" >
   </header>
-  <div id="container_settings">
+  <div class="container_pages">
   <Data 
   @dataChanged="changeData"
   :data = daten[0]>
@@ -17,7 +17,6 @@
   </CurrentWeight>
   
   </div>
-  <p> {{ daten[0] }}</p> 
   
 </template>
 
@@ -62,31 +61,11 @@ export default {
       this.weightData = response.data;
     });
   }
-  }
-
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-header {
-margin-bottom: 30px;
-margin-left: 18px;
-}
-#container_settings {
-  margin-bottom: 30vh;
-}
-
-h1{
-  font-size: 38px;
-  font-weight: 500;
-}
-
-h3{
-  margin-bottom: -4px;
-  font-size: 19px;
-  color: #AFB0B8;
-}
 
 
 </style>

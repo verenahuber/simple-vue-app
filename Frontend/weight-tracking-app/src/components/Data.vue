@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h3>Your Personal Data</h3>
+    <h4>Your Personal Data</h4>
     <v-text-field 
       id="input" 
       label="Your Name" 
@@ -24,7 +24,7 @@
       size="100%"
       variant="underlined"
     ></v-text-field>
-    <button @click="changeData">Change</button>
+    <button class="btn" id="btn_change" @click="changeData">Change</button>
   </div>
 </template>
 
@@ -61,27 +61,16 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 21px;
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 13px;
-  width: 100%;
-  background-color: white;
 }
-button{
-  background-color: #6D60FF;
-  border: none;
-  color: white;
+#btn_change{
   padding: 12px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  cursor: pointer;
   border-radius: 13px;
   margin: 8px -2.5px 0 -2.5px;
 }
-h3 {
+h4 {
   font-size: 21px;
-  margin-bottom: 22px;
-  margin-left: -1px;
+  font-weight: 500;
+  margin-bottom: 23px;
 }
+
 </style>
