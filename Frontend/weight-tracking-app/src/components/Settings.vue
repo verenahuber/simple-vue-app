@@ -10,6 +10,11 @@
   :data = daten[0]>
   <!-- :data = daten[0] -->
   </Data>
+  <CurrentWeight
+    v-if="weightData.length >0"
+        :weightCurrent = weightData[weightData.length-1]
+        :weightOld = weightData[weightData.length-2]>
+  </CurrentWeight>
   
   </div>
   <p> {{ daten[0] }}</p> 
@@ -19,6 +24,7 @@
 <script>
 import Data from "./Data.vue"
 import axios from "axios"
+import CurrentWeight from "./CurrentWeight.vue";
 
 export default {
   name: "Settings",
@@ -27,11 +33,13 @@ export default {
   },
   data: function() {
     return {
-      daten: []
+      daten: [],
+      weightData: []
     };
   },
   components:{
-    Data
+    Data,
+    CurrentWeight
   },
     methods: {
       changeData: function(e) {
@@ -49,7 +57,10 @@ export default {
       .get("http://localhost:8080/data/").then(response => {
       this.daten = response.data;
     });
-    
+    axios
+      .get("http://localhost:8080/weight/").then(response => {
+      this.weightData = response.data;
+    });
   }
   }
 

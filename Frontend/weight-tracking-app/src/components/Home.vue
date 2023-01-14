@@ -20,11 +20,11 @@
   </div>
   <div id="weight_chart">
     <div id="changeButtons"> 
-      <v-btn @click="isweek=true" class="mx-2">Week</v-btn>
-      <v-btn @click="isweek= false" class="mx-2">Month</v-btn>
+      <v-btn @click="isweek=true, changeToWeek" class="mx-2">Week</v-btn>
+      <v-btn @click="isweek=false, changeToMonth" class="mx-2">Month</v-btn>
     </div>
     <WeightChart
-    :isweek="isweek"
+      :isweek="isweek"
       :label="label"
       :weightData="chartDataPrep">
     </WeightChart>
@@ -41,6 +41,7 @@ import WeightChart from "./WeightChart.vue";
 import BMI from "./BMI.vue";
 import CurrentWeight from "./CurrentWeight.vue";
 import axios from "axios";
+
 
 export default {
   name: "Home",
@@ -72,7 +73,33 @@ export default {
         .then(response => {
           this.weightData = response.data;
         });
-    },
+  },
+  changeToMonth () {
+    console.log(this.isweek);
+    let chartData = [];
+    let labels = [];
+    for (let i=this.weightData.length-30; i <= this.weightData.length-1; i++ ){
+      labels.push(this.weightData[i].date);
+      chartData.push(this.weightData[i].weight);
+      console.log('month')
+      console.log(i);
+    }
+    self.chartDataPrep = chartData;
+    self.label = labels;
+  },
+  changeToWeek () {
+    console.log(this.isweek);
+    let chartData = [];
+    let labels = [];
+    for (let i=this.weightData.length-7; i <= this.weightData.length-1; i++ ){
+      labels.push(this.weightData[i].date);
+      chartData.push(this.weightData[i].weight);
+      console.log('week')
+      console.log(i);
+    }
+    self.chartDataPrep = chartData;
+    self.label = labels;
+  }
   },
   mounted() {
     let self = this;
@@ -80,18 +107,21 @@ export default {
       .get("http://localhost:8080/weight/").then(response => {
       this.weightData = response.data;
       let chartData = [];
-      for (let i=this.weightData.length-1; i >= this.weightData.length- (this.isweek ? 7 : 30); i-- ){
-        self.label.push(this.weightData[i].date);
+      let labels = [];
+      for (let i=this.weightData.length-(this.isweek ? 7 : 30); i <= this.weightData.length-1; i++ ){
+        labels.push(this.weightData[i].date);
         chartData.push(this.weightData[i].weight);
+        console.log('mounted');
+        console.log(i);
       }
       self.chartDataPrep = chartData;
-      });
+      self.label = labels;
+    });
     axios
       .get("http://localhost:8080/data/").then(response => {
       this.heightData = response.data;
     });
-    console.log('w' + this.weightData)
-  }
+  },
   };
 </script>
 

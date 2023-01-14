@@ -1,7 +1,7 @@
 <template>
     <div id="bmi">
       <h3>BMI</h3>
-      <h2 @click="calculateBmi"> {{ bmi }} </h2>
+      <h2> {{ bmi }} </h2>
       <p :style="{'color': color}"> {{ result }} </p>
     </div>
 </template>
@@ -37,9 +37,7 @@ export default {
   },
   methods: {
     calculateBmi() {
-      console.log(this.weight.weight, this.height.height)
       this.bmi = Math.round((this.weight.weight / Math.pow((this.height.height), 2))*100)/100
-      console.log(this.bmi)
       if(this.weight.weight === '' || this.height.height === '') {
         this.result = 'No Data'
       }
@@ -57,8 +55,7 @@ export default {
         this.result = 'Obesity'
         this.color = 'red'
       }
-      console.log(this.result, this.color)
-      }
+    }
   }
 };
 </script>

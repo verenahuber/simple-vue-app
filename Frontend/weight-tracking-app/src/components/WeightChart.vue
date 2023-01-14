@@ -53,8 +53,8 @@
             borderColor: '#6D60FF'
           }]
         },
-        label: `${this.isweek ?  'week' : 'month'}`,}
-        
+        label: `${this.isweek ?  'week' : 'month'}`,
+      }   
     },
     mounted() {
       this.updateChart();
@@ -72,7 +72,6 @@
             borderColor: '#6D60FF'
           }]
         };
-        console.log("UPDATE" ,this.chartData)
       }
     }
   }

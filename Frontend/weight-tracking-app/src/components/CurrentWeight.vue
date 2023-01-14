@@ -2,7 +2,7 @@
     <div id="weight">
       <h3>Weight</h3>
       <h2 @click="calculateWeightLoss"> {{ weightCurrent.weight }} kg</h2>
-      <p :style="{'color': color}"> {{ weightLoss }} kg</p>
+      <p :style="{'color': color}"> {{ result }} kg</p>
     </div>
 </template>
   
@@ -38,14 +38,15 @@ export default {
   methods: {
     calculateWeightLoss() {
       this.weightLoss = this.weightCurrent.weight - this.weightOld.weight
-      console.log(this.weightLoss)
       if(this.weightCurrent.weight === '' || this.weightOld.weight === '') {
         this.result = 'No Data'
       }
       if(this.weightLoss < 0) {
-        this.color = 'green'
+        this.color = 'green',
+        this.result = this.weightLoss
       }else if(this.weightLoss > 0) {
         this.color = 'red'
+        this.result = '+' + this.weightLoss
       }
     }
   }
