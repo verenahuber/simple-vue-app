@@ -68,14 +68,14 @@ img {
 
 .container_pages {
   margin-top: 112px;
-  margin-bottom: 17.5vh;
+  margin-bottom: 17.2vh;
 }
 
 .container {
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 13px;
   background-color: white;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .btn {
@@ -85,7 +85,7 @@ img {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 17px;
+  font-size: 17.5px;
   cursor: pointer;
   margin: 0;
 }

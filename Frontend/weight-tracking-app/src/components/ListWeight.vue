@@ -45,7 +45,7 @@ div {
 #ListWeight{
     display: flex;
     flex-direction: row;
-    margin-bottom: 22.2px;
+    margin-bottom: 21.3px;
     padding-left: 20px;
     align-items: center;
 }
@@ -53,6 +53,7 @@ div {
 #date {
     margin-right: 32px;
     font-style: italic;
+    font-size: 16px;
 }
 
 #btn_remove{

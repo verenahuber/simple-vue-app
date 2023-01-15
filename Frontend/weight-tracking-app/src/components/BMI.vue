@@ -66,23 +66,23 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  height: 160px;
+  height: 162px;
   width: 100%;
 }
 h4 {
-  font-size: 21px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
 }
 h2 {
   font-size: 33px;
   font-weight: 500;
   margin-top: 20px;
   color: #6D60FF;
-  margin-bottom: -2px;
-  font-weight: 400;
+  margin-bottom: -3px;
+  font-weight: 500;
 }
 span {
-  font-size: 15px;
+  font-size: 16px;
   font-style: italic;
 }
 

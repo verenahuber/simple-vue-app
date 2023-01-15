@@ -54,7 +54,7 @@ export default {
 .navbar .nav_buttons a {
   padding: 16.5px;
   background: #FAFCFE;
-  color: grey;
+  color: lightgrey;
   cursor: pointer;
   text-decoration: none;
   border-radius: 100px;

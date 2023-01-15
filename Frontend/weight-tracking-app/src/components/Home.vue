@@ -125,7 +125,7 @@ export default {
       this.heightData = response.data;
     });
   },
-  }
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -137,7 +137,7 @@ export default {
 }
 
 #space {
-  margin-left: 30px ;
+  margin-left: 28px ;
 }
 
 #weight_chart {
@@ -145,9 +145,9 @@ export default {
 }
 
 h4 {
-  font-size: 21px;
-  font-weight: 500;
-  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 43px;
   margin-left: -1px;
 }
 

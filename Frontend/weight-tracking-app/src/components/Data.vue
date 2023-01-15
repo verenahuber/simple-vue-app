@@ -1,6 +1,10 @@
 <template>
+   <div class="container">
+    <h4>Welcome back</h4>
+    <span> {{ data.name }} </span>
+  </div>
   <div class="container">
-    <h4>Your Personal Data</h4>
+    <h4>Personal Data</h4>
     <v-text-field 
       id="input" 
       label="Your Name" 
@@ -65,11 +69,11 @@ export default {
 #btn_change{
   padding: 12px 15px;
   border-radius: 13px;
-  margin: 8px -2.5px 0 -2.5px;
+  margin: 5px -2.5px 0 -2.5px;
 }
 h4 {
-  font-size: 21px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   margin-bottom: 23px;
 }
 
