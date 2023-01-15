@@ -75,7 +75,6 @@ h2 {
   font-weight: 500;
 }
 span {
-  font-size: 16px;
   font-style: italic;
 }
 

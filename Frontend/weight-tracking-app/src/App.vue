@@ -58,7 +58,7 @@ header {
   margin-left: 43px;
 }
 
-img {
+.head_image {
   position: fixed;
   right: 0;
   margin-right: 47px;

@@ -1,10 +1,11 @@
 <template>
-   <div class="container">
-    <h4>Welcome back</h4>
-    <span> {{ data.name }} </span>
-  </div>
+  <div class="container" id="welcome">
+      <h4>Welcome back</h4>
+      <h2> {{ data.name }} </h2>
+      <span>Thanks for using our app!</span>
+    </div>
   <div class="container">
-    <h4>Personal Data</h4>
+    <h4 id="headline_data">Personal Data</h4>
     <v-text-field 
       id="input" 
       label="Your Name" 
@@ -66,6 +67,7 @@ export default {
   flex-direction: column;
   padding: 21px;
 }
+
 #btn_change{
   padding: 12px 15px;
   border-radius: 13px;
@@ -74,7 +76,38 @@ export default {
 h4 {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 23px;
+}
+
+h2 {
+  font-size: 33px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #6D60FF;
+  margin-bottom: -3px;
+  font-weight: 500;
+}
+
+#headline_data{
+  margin-bottom: 25px;
+}
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 162px;
+  width: 100%;
+}
+h2 {
+  font-size: 33px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #6D60FF;
+  margin-bottom: -3px;
+  font-weight: 500;
+}
+span {
+  font-style: italic;
 }
 
 </style>
