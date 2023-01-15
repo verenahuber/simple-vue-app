@@ -2,7 +2,7 @@
   <header> 
     <h3 class="headline_1">Overview</h3>
     <h1 class="headline_2">Home</h1> 
-    <img class="head_image"  src="https://cdn.discordapp.com/attachments/1057666656320618587/1063508132757778512/waage_9.png" >
+    <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063508132757778512/waage_9.png" >
   </header>
   <div class="container_pages">
   <div id="bmi_weight">
@@ -44,7 +44,6 @@ import WeightChart from "./WeightChart.vue";
 import BMI from "./BMI.vue";
 import CurrentWeight from "./CurrentWeight.vue";
 import axios from "axios";
-
 
 export default {
   name: "Home",
@@ -131,52 +130,44 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-#bmi_weight{
+#bmi_weight {
   display: flex;
   flex-direction: row;
 }
-
 #space {
   margin-left: 28px ;
 }
-
 #weight_chart {
   padding: 20px;
 }
-
 h4 {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 43px;
+  margin-bottom: 45px;
   margin-left: -1px;
 }
-
-#chart{
+#chart {
   display: flex;
   flex-direction: row;
 }
-
-#chart_btn{
+#chart_btn {
   position: absolute;
   right: 0;
   margin-right: 48px;
 }
-
-#btn_week{
-  padding: 6px 12px;
+#btn_week {
+  font-size: 16px;
+  background-color: #A3A5B5;
   border-radius: 10px 0 0 10px;
-  background-color: lightgrey;
-  font-size: 16px;
-}
-
-#btn_month{
   padding: 6px 12px;
-  border-radius: 0 10px 10px 0;
-  background-color: lightgrey;
-  font-size: 16px;
 }
-
-#btn_month:focus, #btn_week:focus  {
+#btn_month {
+  font-size: 16px;
+  background-color: #A3A5B5;
+  border-radius: 0 10px 10px 0;
+  padding: 6px 12px;
+}
+#btn_month:focus, #btn_week:focus {
   background-color: #6D60FF;
 }
 

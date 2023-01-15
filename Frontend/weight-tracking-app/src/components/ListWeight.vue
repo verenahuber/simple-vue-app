@@ -7,7 +7,7 @@
             variant="underlined"
             suffix="kg">
         </v-text-field>
-        <span id="date">{{ entry.date }}</span>
+        <span>{{ entry.date }}</span>
         <button class="btn" id="btn_remove" @click="removeWeight">Remove</button>
     </div>
 </template>
@@ -37,28 +37,26 @@ export default {
 }
 </script>
 
+
 <style scoped>
+
 div {
-    display: flex;
+  display: flex;
 }
-
-#ListWeight{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 21.3px;
-    padding-left: 20px;
-    align-items: center;
+#ListWeight {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  margin-bottom: 21.3px;
+  padding-left: 20px;
 }
-
-#date {
-    margin-right: 32px;
-    font-style: italic;
-    font-size: 16px;
+span {
+  font-style: italic;
+  margin-right: 32px;
 }
-
-#btn_remove{
-  padding: 12px 17px;
+#btn_remove {
   border-radius: 0 13px 13px 0;
+  padding: 12px 17px;
 }
 
 </style>

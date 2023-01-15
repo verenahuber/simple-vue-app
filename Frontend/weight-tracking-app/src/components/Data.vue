@@ -67,47 +67,35 @@ export default {
   flex-direction: column;
   padding: 21px;
 }
-
-#btn_change{
-  padding: 12px 15px;
-  border-radius: 13px;
-  margin: 5px -2.5px 0 -2.5px;
+#welcome {
+  display: flex;
+  flex-direction: column;
+  height: 158px;
+  width: 100%;
+  padding: 20px;
 }
 h4 {
   font-size: 20px;
   font-weight: 600;
 }
-
 h2 {
-  font-size: 33px;
+  font-size: 30px;
   font-weight: 500;
-  margin-top: 20px;
   color: #6D60FF;
-  margin-bottom: -3px;
-  font-weight: 500;
-}
-
-#headline_data{
-  margin-bottom: 25px;
-}
-
-#welcome {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  height: 162px;
-  width: 100%;
-}
-h2 {
-  font-size: 33px;
-  font-weight: 500;
-  margin-top: 20px;
-  color: #6D60FF;
-  margin-bottom: -3px;
-  font-weight: 500;
+  margin-top: 22px;
+  margin-bottom: -2px;
 }
 span {
   font-style: italic;
+  color: #A3A5B5;
+}
+#headline_data {
+  margin-bottom: 25px;
+}
+#btn_change {
+  border-radius: 13px;
+  margin: 8px -2.5px 0 -2.5px;
+  padding: 12px 15px;
 }
 
 </style>

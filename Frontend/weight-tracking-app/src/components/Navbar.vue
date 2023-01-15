@@ -37,35 +37,36 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 28px;
-  padding: 31px 0px 40px;
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  right: 1.5px;
-  background-color: #FAFCFE;
   z-index: 1;
+  width: 100%;
+  bottom: 0;
+  right: 1.5px;
+  margin: 0;
+  padding: 31px 0px 40px;
+  font-size: 28px;
+  background-color: #FAFCFE;
 }
 .navbar .nav_buttons {
   display: flex;
   align-items: center;
 }
 .navbar .nav_buttons a {
-  padding: 16.5px;
-  background: #FAFCFE;
-  color: lightgrey;
   cursor: pointer;
   text-decoration: none;
   border-radius: 100px;
+  padding: 16.5px;
+  background: #FAFCFE;
+  color: #A3A5B5;
 }
-#gap{
+#gap {
   padding-left: 30px;
   padding-right: 30px;
 }
-.active{
+.active {
   color:#6D60FF !important;
   background: rgb(255, 255, 255) !important;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
 }
+
 </style>

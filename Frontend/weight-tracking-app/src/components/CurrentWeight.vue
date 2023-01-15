@@ -55,28 +55,26 @@ export default {
 
 <style scoped>
 
-#weight{
+#weight {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  height: 162px;
+  height: 158px;
   width: 100%;
+  padding: 20px;
 }
 h4 {
   font-size: 20px;
   font-weight: 600;
 }
 h2 {
-  font-size: 33px;
+  font-size: 30px;
   font-weight: 500;
-  margin-top: 20px;
   color: #6D60FF;
-  margin-bottom: -3px;
-  font-weight: 500;
+  margin-top: 22px;
+  margin-bottom: -2px;
 }
 span {
   font-style: italic;
 }
-
 
 </style>
