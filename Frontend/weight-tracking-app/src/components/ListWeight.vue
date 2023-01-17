@@ -16,11 +16,6 @@
 export default {
     name: "ListWeight",
     props: ["entry", "index"],
-    data: function () {
-        return {
-            isEditable: false
-        };
-    },
     methods: {
         removeWeight: function () {
             this.$emit("weightRemoved", {
