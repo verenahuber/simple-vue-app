@@ -6,7 +6,6 @@
   </header>
   <div class="container_pages">
     <ListWeight
-      id="ListWeight"
       v-for="(singleEntry, index) of listOfEntries.slice().reverse()"
       :key="index"
       :entry="singleEntry"

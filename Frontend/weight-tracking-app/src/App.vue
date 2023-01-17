@@ -1,7 +1,7 @@
 <template>
   <div>
-   <Navbar></Navbar>
-   <router-view></router-view>
+    <Navbar></Navbar>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar.vue";
 export default {
   name: "App",
   components: {
-   Navbar
+    Navbar
   }
 }
 
@@ -19,7 +19,6 @@ export default {
 
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 #app {
@@ -43,17 +42,20 @@ header {
   top: 0;
   background-color: #FAFCFE;
 }
+
 .headline_1 {
   font-size: 21px;
   color: #AFB0B8;
   font-weight: 500;
   margin: 35px 0 -5px 44px;
 }
+
 .headline_2 {
   font-size: 38px;
   font-weight: 500;
   margin-left: 43px;
 }
+
 img {
   position: fixed;
   right: 0;
@@ -88,8 +90,8 @@ img {
   background-color: #6D60FF;
   margin: 0;
 }
+
 .btn:active {
   background-color: #7c70fc;
 }
-
 </style>

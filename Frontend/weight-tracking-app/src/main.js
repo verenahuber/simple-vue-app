@@ -1,15 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-
-import { createRouter, createWebHashHistory} from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 import Home from "./components/Home.vue"
 import History from "./components/History.vue"
 import Settings from "./components/Settings.vue"
-
-
-//import './assets/main.css'
 
 // Vuetify
 import 'vuetify/styles'
@@ -20,15 +16,15 @@ import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loade
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
 const vuetify = createVuetify({
-    components,
-    directives,
-    icons: {
-        defaultSet: 'mdi',
-        aliases,
-        sets: {
-          mdi,
-        }
-      },
+  components,
+  directives,
+  icons: {
+    defaultSet: 'mdi',
+    aliases,
+    sets: {
+      mdi,
+    }
+  },
 })
 
 const app = createApp(App).use(vuetify)
@@ -36,9 +32,9 @@ const app = createApp(App).use(vuetify)
 createApp(App)
 
 const routes = [
-  {path: "/", component: Home},
-  {path: "/history", component: History},
-  {path: "/settings", component: Settings}
+  { path: "/", component: Home },
+  { path: "/history", component: History },
+  { path: "/settings", component: Settings }
 ]
 
 

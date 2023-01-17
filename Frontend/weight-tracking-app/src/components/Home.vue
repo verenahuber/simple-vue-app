@@ -59,9 +59,7 @@ export default {
   data: function() {
     return {
       weightData: [],
-      heightData: [],
-      label: [],
-      chartDataPrep: [],
+      heightData: [], 
       isweek: true
     };
   },
