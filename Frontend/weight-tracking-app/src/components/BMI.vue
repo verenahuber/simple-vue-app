@@ -1,13 +1,12 @@
 <template>
-    <div class="container" id="bmi">
-      <h4>BMI</h4>
-      <h2> {{ bmi }} </h2>
-      <span :style="{'color': color}"> {{ result }} </span>
-    </div>
+  <div class="container" id="bmi">
+    <h4>BMI</h4>
+    <h2> {{ bmi }} </h2>
+    <span :style="{ 'color': color }"> {{ result }} </span>
+  </div>
 </template>
   
 <script>
-
 export default {
   name: "BMI",
   props: {
@@ -15,43 +14,43 @@ export default {
       type: Number,
       required: true,
       default: 10
-    },  
+    },
     height: {
       type: Number,
       required: true,
       default: 10
     },
   },
-  data: function() {
+  data: function () {
     return {
       result: 'result',
       bmi: 0,
       color: ''
     };
   },
-  mounted: function() {
+  mounted: function () {
     this.calculateBmi();
   },
-  updated: function(){
+  updated: function () {
     this.calculateBmi();
   },
   methods: {
     calculateBmi() {
-      this.bmi = Math.round((this.weight.weight / Math.pow((this.height.height), 2))*100)/100
-      if(this.weight.weight === '' || this.height.height === '') {
+      this.bmi = Math.round((this.weight.weight / Math.pow((this.height.height), 2)) * 100) / 100
+      if (this.weight.weight === '' || this.height.height === '') {
         this.result = 'No Data'
       }
 
-      if(this.bmi < 18.5 && this.bmi > 0) {
+      if (this.bmi < 18.5 && this.bmi > 0) {
         this.result = 'Underweight'
         this.color = 'red'
-      }else if(this.bmi >=18.5 && this.bmi < 24.9) {
+      } else if (this.bmi >= 18.5 && this.bmi < 24.9) {
         this.result = 'Normalweight'
         this.color = 'green'
-      }else if(this.bmi >=24.9 && this.bmi < 29.9) {
+      } else if (this.bmi >= 24.9 && this.bmi < 29.9) {
         this.result = 'Overweight'
         this.color = 'orange'
-      }else if(this.bmi >= 29.9){
+      } else if (this.bmi >= 29.9) {
         this.result = 'Obesity'
         this.color = 'red'
       }
@@ -61,7 +60,6 @@ export default {
 </script>
 
 <style scoped>
-
 #bmi {
   display: flex;
   flex-direction: column;
@@ -69,10 +67,12 @@ export default {
   width: 100%;
   padding: 20px;
 }
+
 h4 {
   font-size: 20px;
   font-weight: 600;
 }
+
 h2 {
   font-size: 30px;
   font-weight: 500;
@@ -80,8 +80,8 @@ h2 {
   margin-top: 22px;
   margin-bottom: -2px;
 }
+
 span {
   font-style: italic;
 }
-
 </style>
