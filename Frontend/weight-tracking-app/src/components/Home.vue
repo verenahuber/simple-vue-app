@@ -22,8 +22,8 @@
     <div id="chart"> 
       <h4>Statistics</h4>
       <div id="chart_btn">
-      <button class="btn" id="btn_week" @click="isweek=true, changeToWeek" >Week</button>
-      <button class="btn" id="btn_month"  @click="isweek=false, changeToMonth" >Month</button>
+      <button class="btn" id="btn_week" @click="isweek=true, changeDays()" >7 Days</button>
+      <button class="btn" id="btn_2weeks"  @click="isweek=false, changeDays()" >14 Days</button>
   </div>
     </div>
     <WeightChart
@@ -74,57 +74,34 @@ export default {
         })
         .then(response => {
           this.weightData = response.data;
+          this.changeDays();
         });
   },
-  changeToMonth () {
-    console.log(this.isweek);
-    let chartData = [];
-    let labels = [];
-    for (let i=this.weightData.length-30; i <= this.weightData.length-1; i++ ){
-      labels.push(this.weightData[i].date);
-      chartData.push(this.weightData[i].weight);
-      console.log('month')
-      console.log(i);
-    }
-    self.chartDataPrep = chartData;
-    self.label = labels;
+  changeDays () {
+    let self = this;
+        let chartData = [];
+        let labels = [];
+        for (let i=this.weightData.length-(this.isweek ? 7 : 14); i <= this.weightData.length-1; i++ ){
+          labels.push(this.weightData[i].date);
+          chartData.push(this.weightData[i].weight);
+        }
+        self.chartDataPrep = chartData;
+        self.label = labels;
   },
-  changeToWeek () {
-    console.log(this.isweek);
-    let chartData = [];
-    let labels = [];
-    for (let i=this.weightData.length-7; i <= this.weightData.length-1; i++ ){
-      labels.push(this.weightData[i].date);
-      chartData.push(this.weightData[i].weight);
-      console.log('week')
-      console.log(i);
-    }
-    self.chartDataPrep = chartData;
-    self.label = labels;
-  }
   },
   mounted() {
-    let self = this;
     axios
       .get("http://localhost:8080/weight/").then(response => {
       this.weightData = response.data;
-      let chartData = [];
-      let labels = [];
-      for (let i=this.weightData.length-(this.isweek ? 7 : 30); i <= this.weightData.length-1; i++ ){
-        labels.push(this.weightData[i].date);
-        chartData.push(this.weightData[i].weight);
-        console.log('mounted');
-        console.log(i);
-      }
-      self.chartDataPrep = chartData;
-      self.label = labels;
+      this.changeDays()
+      this.buttonColor()
     });
     axios
       .get("http://localhost:8080/data/").then(response => {
       this.heightData = response.data;
     });
   },
-  };
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -161,13 +138,13 @@ h4 {
   border-radius: 10px 0 0 10px;
   padding: 6px 12px;
 }
-#btn_month {
+#btn_2weeks {
   font-size: 16px;
   background-color: #A3A5B5;
   border-radius: 0 10px 10px 0;
   padding: 6px 12px;
 }
-#btn_month:focus, #btn_week:focus {
+#btn_2weeks:focus, #btn_week:focus {
   background-color: #6D60FF;
 }
 

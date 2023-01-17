@@ -52,7 +52,7 @@
             borderColor: '#6D60FF'
           }]
         },
-        label: `${this.isweek ?  'week' : 'month'}`,
+        label: `${this.isweek ?  '7 Days' : '14 Days'}`,
       }   
     },
     mounted() {
@@ -67,8 +67,10 @@
           labels: this.label,
           datasets: [ { 
             data: [...this.weightData], 
-            label: `${this.isweek ?  'week' : 'month'}`,
-            borderColor: '#6D60FF'
+            label: `${this.isweek ?  '7 Days' : '14 Days'}`,
+            borderColor: '#6D60FF',
+            pointStyle: 'circle',
+            pointRadius: 5
           }]
         };
       }
