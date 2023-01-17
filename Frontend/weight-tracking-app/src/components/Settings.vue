@@ -5,18 +5,18 @@
     <img src="https://cdn.discordapp.com/attachments/1057666656320618587/1063508132757778512/waage_9.png" >
   </header>
   <div class="container_pages">
-  <Data 
+  <PersonalData 
   @dataChanged="changeData"
   :data = daten[0]>
   <!-- :data = daten[0] -->
-  </Data>
+  </PersonalData>
 
   </div>
   
 </template>
 
 <script>
-import Data from "./Data.vue"
+import PersonalData from "./PersonalData.vue"
 import axios from "axios"
 
 export default {
@@ -31,7 +31,7 @@ export default {
     };
   },
   components:{
-    Data,
+    PersonalData,
   },
     methods: {
       changeData: function(e) {
