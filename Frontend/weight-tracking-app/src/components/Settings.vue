@@ -29,7 +29,6 @@ export default {
   },
   methods: {
     changeData: function (e) {
-      console.log(e.name)
       axios
         .put("http://localhost:8080/data/0", {
           name: e.name,

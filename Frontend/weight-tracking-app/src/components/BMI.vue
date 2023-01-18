@@ -11,14 +11,14 @@ export default {
   name: "BMI",
   props: {
     weight: {
-      type: Number,
+      type: Object,
       required: true,
-      default: 10
+      default: {}
     },
     height: {
-      type: Number,
+      type: Object,
       required: true,
-      default: 10
+      default: {}
     },
   },
   data: function () {
@@ -41,7 +41,7 @@ export default {
         this.result = 'No Data'
       }
 
-      if (this.bmi < 18.5 && this.bmi > 0) {
+      if (this.bmi <= 18.5 && this.bmi > 0) {
         this.result = 'Underweight'
         this.color = 'red'
       } else if (this.bmi >= 18.5 && this.bmi < 24.9) {

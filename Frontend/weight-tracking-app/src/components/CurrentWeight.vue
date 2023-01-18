@@ -11,14 +11,14 @@ export default {
   name: "BMI",
   props: {
     weightCurrent: {
-      type: Number,
+      type: Object,
       required: true,
-      default: 10
+      default: {}
     },
     weightOld: {
-      type: Number,
+      type: Object,
       required: true,
-      default: 10
+      default: {}
     },
   },
   data: function () {
@@ -40,7 +40,7 @@ export default {
       if (this.weightCurrent.weight === '' || this.weightOld.weight === '') {
         this.result = 'No Data'
       }
-      if (this.weightLoss < 0) {
+      if (this.weightLoss <= 0) {
         this.color = 'green',
           this.result = this.weightLoss.toFixed(1)
       } else if (this.weightLoss > 0) {

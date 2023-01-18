@@ -6,11 +6,9 @@
   </div>
   <div class="container">
     <h4 id="headline_data">Personal Data</h4>
-    <v-text-field id="input" label="Your Name" v-model="data.name" size="100%" variant="underlined"></v-text-field>
-    <v-text-field id="input" label="Your Height" v-model="data.height" suffix="meters" size="100%"
-      variant="underlined"></v-text-field>
-    <v-text-field id="input" label="Your Age" v-model="data.age" suffix="years" size="100%"
-      variant="underlined"></v-text-field>
+    <v-text-field id="input" label="Your Name" v-model="data.name" variant="underlined"></v-text-field>
+    <v-text-field id="input" label="Your Height" v-model="data.height" suffix="meters" variant="underlined"></v-text-field>
+    <v-text-field id="input" label="Your Age" v-model="data.age" suffix="years" variant="underlined"></v-text-field>
     <button class="btn" id="btn_change" @click="changeData">Change</button>
   </div>
 </template>
@@ -20,9 +18,9 @@ export default {
   name: "Data",
   props: {
     data: {
-      type: Promise,
+      type: Object,
       required: true,
-      default: 10
+      default: {}
     }
   },
   methods: {

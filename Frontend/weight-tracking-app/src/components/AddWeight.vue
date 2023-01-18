@@ -1,8 +1,7 @@
 <template>
   <div class="container" id="add_weight">
     <h4>Add weight</h4>
-    <v-text-field class="mt-1" v-model="weight" size="80%" variant="underlined" suffix="kg"></v-text-field>
-    <span></span>
+    <v-text-field class="mt-1" v-model="weight" variant="underlined" suffix="kg"></v-text-field>
     <button class="btn" id="btn_add" @click="addWeight">Add</button>
   </div>
 </template>
@@ -48,10 +47,6 @@ h4 {
   font-size: 19px;
   font-weight: 600;
   margin-bottom: 32px;
-}
-
-span {
-  margin-right: 55px;
 }
 
 #btn_add {

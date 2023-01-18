@@ -85,7 +85,6 @@ export default {
       .get("http://localhost:8080/weight/").then(response => {
         this.weightData = response.data;
         this.changeDays()
-        this.buttonColor()
       });
     axios
       .get("http://localhost:8080/data/").then(response => {
