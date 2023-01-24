@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Line :options="chartOptions" :data="chartData" />
+    <Line :data="chartData" />
   </div>
 </template>
 

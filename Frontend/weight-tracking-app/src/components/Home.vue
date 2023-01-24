@@ -53,7 +53,9 @@ export default {
     return {
       weightData: [],
       heightData: [],
-      isweek: true
+      isweek: true,
+      chartDataPrep: [],
+      label: []
     };
   },
   methods: {
